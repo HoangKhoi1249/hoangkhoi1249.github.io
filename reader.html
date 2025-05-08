@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trình Đọc Markdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    #reader {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>📖 Trình Đọc Web Markdown</h1>
+
+  <select onchange="loadChapter(this.value)">
+    <option value="">-- Chọn chương --</option>
+    <option value="chapter1.md">Chương 1: Mở đầu</option>
+  </select>
+
+  <div id="reader">
+    <p>Chọn một chương ở trên để bắt đầu đọc.</p>
+  </div>
+
+  <script>
+    async function loadChapter(filename) {
+      if (!filename) return;
+
+      try {
+        const response = await fetch('chapters/' + filename);
+        if (!response.ok) throw new Error('Không thể tải chương');
+
+        const md = await response.text();
+        document.getElementById('reader').innerHTML = marked.parse(md);
+      } catch (error) {
+        document.getElementById('reader').innerHTML = '<p style="color:red;">Lỗi: Không thể tải chương!</p>';
+        console.error(error);
+      }
+    }
+  </script>
+</body>
+</html>
