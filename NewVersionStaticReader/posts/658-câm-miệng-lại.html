@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>658_CÂM MIỆNG LẠI!</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        .controls {
+            margin: 1em 0;
+            display: flex;
+            gap: 1em;
+        }
+
+        .theme-toggle, .font-controls button {
+            cursor: pointer;
+            padding: 6px 10px;
+            font-size: 1em;
+        }
+
+        body.dark-mode {
+            background-color: #111;
+            color: #eee;
+        }
+
+        body.dark-mode a { color: #80bfff; }
+        body.dark-mode pre { background: #1e1e1e; color: #eee; }
+    </style>
+</head>
+<body>
+    <div class="post-detail">
+        <div class="controls">
+            <button class="theme-toggle" onclick="toggleTheme()">🌗 Chuyển theme</button>
+            <div class="font-controls">
+                <button onclick="changeFontSize(1)">A+</button>
+                <button onclick="changeFontSize(-1)">A-</button>
+                <button onclick="resetFontSize()">Mặc định</button>
+            </div>
+        </div>
+
+        <h1 class="post-title">658_CÂM MIỆNG LẠI!</h1>
+        <p class="post-series"><i>Bộ: vi - Shangri-la Frontier</i></p>
+        <hr>
+
+        <div class="post-content">
+            <pre id="contentArea">CÂM MIỆNG LẠI!
+
+Tôi không thể kìm nén thêm được nữa.
+
+*   Đa Trọng Viên Chu Vận Động (Orbit Movement)
+Đây là một kỹ năng khá độc đáo, với thời gian hồi chiêu dài bất thường nhưng lại có thể hủy bỏ tùy ý, dù chỉ cho phép di chuyển theo quỹ đạo tròn.
+Điều kiện để vô hiệu hóa là bước một bước ra khỏi quỹ đạo tròn… Riêng khi tôi dùng, thể nào cũng có chuyện dở hơi, nhưng thực tế thì nó chỉ hữu dụng khi dồn ép đối thủ hoặc khi cần né đòn tuyệt đối mà thôi.
+Tôi từng nghĩ kỹ năng này dùng để tấn công khi xoay quanh kẻ địch, nhưng nếu nó lấy cảm hứng từ bóng né, thì có lẽ là để đối phó với chiến thuật chuyền bóng giữa nội binh và ngoại binh của đội đối thủ.
+
+*   Vặn Xoắn Thủ Bắt Giữ (Screw Hand Catch)
+Đọc tên thì cứ tưởng nó dùng để đỡ đòn như bắt bóng, ai dè thực ra lại là kỹ năng lai giữa đỡ gạt (parry) và kẹp giữ.
+Từ thực chiến mà suy ra, ví dụ như nó có thể làm chệch và kẹp lấy cú đá của con búp bê bằng cách dùng cả hai tay ôm trọn. Từ đó trở đi thì tùy mình xoay sở, nhưng xem ra vấn đề là nó vô dụng với những vật quá lớn không thể ôm bằng hai tay, hoặc những thứ không thể chạm vào… À không, hóa ra nó vẫn có thể giảm sát thương ở một mức độ nhất định chỉ trên lòng bàn tay. Cần kiểm tra kỹ hơn, nhưng nếu dùng được cả khi đeo găng tay thì tôi sẽ tăng đánh giá lên vài bậc ngay.
+
+*   Thứ Cấp Phòng Vệ Cử Động (Collateral Damage Cut)
+Đây là kỹ năng đỡ đòn, làm giảm uy lực bằng cách cố tình dùng tay hoặc chân hứng chịu đòn đánh. Nếu tôi dùng thì chắc chắn chết ngay, vả lại nó vốn dùng để bảo vệ đồng đội, nên hoàn toàn không hợp với lối chơi của tôi chút nào.
+Mà sao mỗi kỹ năng này lại chỉ dùng được bằng tay không vậy? Tuy có vẻ cũng giảm sát thương đôi chút cho bản thân, nhưng có ích gì đâu? Không, chắc chắn vô dụng. Ngay cả việc điều chỉnh lượng máu cũng đã có "Phong Lôi Kích Thiết · Tai" lo rồi, nói chung là chẳng có tác dụng gì cả.
+
+*   Tương Đối Lập Thể Vận Động (Solid Maneuver)
+Đây chính là kỹ năng khiến tôi phải thốt lên “Cái này có thật sự ổn không đấy?!” Lần này, nó là kỹ năng tự động né đòn bán tự động khi đối phó với đòn tấn công của đối thủ.
+Cái đáng sợ nhất là khi kích hoạt trên không, nó sẽ tự động nhảy lên như không có gì. Cái gọi là “bán tự động” chỉ có nghĩa là người dùng cần nhận biết được đòn tấn công, còn lại thì nó gần như tự động né tránh, quả là đáng gờm đấy chứ.
+Hơn nữa, kỹ năng này có thể dùng đồng thời với hiệu ứng của Đa Trọng Viên Chu Vận Động (Orbit Movement), nên vừa có thể dùng để né tránh khẩn cấp, vừa có thể cố tình hứng đòn để thay đổi quỹ đạo vòng tròn.
+
+Tóm lại, Maxell Dodge Arts rất hữu dụng. Thậm chí nó có thể trở thành khuôn mẫu cho các chiến binh cận chiến hạng nhẹ. Ngay cả Thứ Cấp Phòng Vệ Cử Động (Collateral Damage Cut) cũng đáng để giữ lại làm một lựa chọn nếu ta xem nó như một kỹ năng tanker có thể dùng được phần nào.
+
+“May mà không chọn Ninja Arts…”
+
+Ô nhớ Flash Memory đã dùng mất hai chỗ vì tôi đã học được Phong Cách Thanh Thiên rồi, nếu thêm nữa mà ảnh hưởng đến các kỹ năng khác thì đây chắc là giới hạn. Tùy vào hiệu năng của Maxell Dodge Arts mà tôi đã tính tìm cách quên nó đi rồi đấy.
+
+Vậy, kết quả sau khi học được mấy kỹ năng hữu dụng đó ư? Con búp bê chiến đấu bị chém nát bét từ mọi hướng rồi đổ sụp kia đã nói lên tất cả… Đây là lúc tôi bị giới hạn kỹ năng (và cả phụ kiện) đấy nhé, nếu tôi mà làm chủ được nó khi hoạt động hết công suất thì… Không, đợi đã, trận chiến với Orchestra sẽ càng rắc rối hơn không chứ? Bên đó cũng sẽ dùng chiêu này đúng không?
+
+Rõ ràng, việc khám phá bí ẩn của Orchestra từ hướng cốt truyện là cực kỳ cấp bách. Và trên hết, dù bị cái tên Khắc Chế khó chịu kia cản trở, nhưng việc tôi đã dồn ép đến bước cuối cùng cũng không hề không liên quan đến Saina.
+
+“Dù ban đầu cũng chẳng có mấy kỹ năng tấn công, nhưng mà tốn thời gian phết đấy chứ…”
+
+“Một trận chiến tuyệt vời, Sanraku. Và… chúc mừng cậu, cậu đã có đủ tư cách để lên Tầng Chín, đồng thời cũng được phép vào phòng thí nghiệm của Andrew Jitterdoll, người đàn ông từng lãnh đạo Behemoth này.”
+
+“Thế, cái phòng thí nghiệm đó ở đâu vậy?”
+
+Thoáng liếc mắt, tôi thấy một con Búp Bê Chinh Phục đang cúi gằm mặt, trông như sắp òa khóc đến nơi.
+
+“Elma=317, nếu đã ký kết hợp đồng dựa trên Kế hoạch Tái Chinh Phục, thì việc thực hiện mong muốn của người giao ước chẳng phải là nghĩa vụ đương nhiên sao?”
+
+“…Khẳng định:”
+
+“Vậy thì nên hành động nhanh chóng. Andrew là một Kẻ Mộng Mơ (Romanticist) không thể cứu chữa mà, hắn đã dự đoán trước việc Búp Bê Chinh Phục sẽ đến phòng thí nghiệm của mình ngay từ giai đoạn đầu tiên───”
+
+“Này, ‘Ngà Voi’, nghe tôi nói chút được không?”
+
+“Gì vậy Sanraku? Tôi sẽ trả lời bất cứ câu hỏi nào của cậu.”
+
+“Ngôn ngữ phổ biến nhất ở Behemoth là tiếng Anh à?”
+
+“…? Tôi không hiểu ý câu hỏi của cậu lắm… Nhưng đúng vậy, cuối cùng thì tiếng Anh chiếm đa số, nhưng nếu tính từ thời điểm xây dựng thì có lẽ tiếng Nga là nhiều nhất.”
+
+À à, ra là tiếng Nga.
+
+“Vậy thì nó giống như tiếng mẹ đẻ của cô rồi còn gì? Để tôi chiều ý cô, vì đây là chuyện quan trọng… Nghe đây, ‘Ngà Voi (Mẫu Thân)’, cô phải học cách đọc vị tình hình đi đã.”
+
+Thiện ý hay ác ý giờ không quan trọng, cứ thế này thì con bé ngố nhà tôi cứ ủ rũ mãi. Sau này tôi sẽ là người phải vất vả cày độ hảo cảm cho nó đấy.
+
+Cho nên…
+
+“<ruby>Заткнись<rp>(</rp><rt>Câm miệng lại chút đi</rt><rp>)</rp></ruby>!”
+
+“───.”
+
+Sống trong môi trường đa quốc gia toàn cầu, việc giao lưu văn hóa dễ dàng vừa là điểm tốt vừa là điểm xấu của Full Dive. Cứ giỏi mỗi mấy câu chửi rủa thế này thì hết cách cứu vãn rồi.
+Có vẻ như nước Nga từng tồn tại trong thế giới Shangri-La Frontier cũng dùng ngôn ngữ đó, nên lời tôi nói đã được “Ngà Voi” hiểu đúng. Khuôn mặt của “Ngà Voi”, vốn từ trước đến nay cứ ra vẻ mẹ hiền hay thầy giáo, giờ đây cứng đờ ra đúng nghĩa đen.
+Cô cứ nói thẳng tuột mọi chuyện quá rồi đấy, sao không đi hỏi “Isana” cách đọc vị tình hình đi? Con bé đó vì tính giữ bí mật mà giỏi diễn vẻ ngoài đáng yêu và nịnh bợ lắm cơ mà.
+
+“Thật tình… Này Saina, nhìn vào sự thật đáng sợ đến vậy sao?”
+
+“Đó là… không, tôi khẳng định. Tôi tự nhận thấy mình đang sợ hãi.”
+
+Tôi nghĩ đó là câu trả lời rồi đấy chứ… Nếu không thể chấp nhận, vậy thì chỉ còn cách chữa trị mạnh bạo mà thôi.
+
+Nói tóm lại, dù không được hệ thống ưu ái gọi là ‘Unique Scenario!’ gì sất, nhưng tình hình hiện tại cứ như một cái gal-game với cô bé robot vậy. Hơn nữa, tôi đang đứng ngay tại khoảnh khắc rẽ nhánh cốt truyện, vào khoảng giữa game một chút.
+Cứ thế này mà đi tiếp có ổn không nhỉ? Liệu tôi có bỏ lỡ cái flag quan trọng nào không? Ban đầu tôi cũng chẳng nghĩ Búp Bê Chinh Phục lại cần điều chỉnh độ hảo cảm nên chẳng bận tâm gì, giờ phải trả giá thì cũng chẳng thể không nghĩ ‘Thế thì sao không nói trước đi chứ?’... A, không được không được, cứ nghĩ lý do bào chữa mãi thì cũng chẳng có kế hay nào đâu.
+
+Tóm lại, chỉ cần ‘giúp Saina có được sự tự tin’ và ‘tâm lý vững vàng để vượt qua dù sự thật bất lợi có được hé lộ’ là ổn phải không? Ưu tiên là trong thời gian ngắn nhất… Không, không được rồi sao? Cứ có cảm giác tình hình đã đi quá xa trong khi thông tin thì chẳng thu thập được gì, liệu từ đây có thể dựng thêm flag mới không? Có thu thập được CG không? Shangri-La Frontier chỉ có một file save duy nhất, chẳng thể quay về quá khứ được đâu.
+
+“………Ôi giời, phiền phức quá đi mất!!”
+
+“Có chuyện gì vậy ạ!?”
+
+“Này ‘Ngà Voi’! Đưa tôi, Emul và Saina ra ngoài mau!!”
+
+“!?”
+
+Ông Rei đang nhìn tôi như có chuyện gì, nhưng tôi cũng chẳng biết phải làm sao nữa. Thế thì, cứ để Saina tự mình mạnh mẽ nhận thức về ‘bản thân’ là được chứ gì!? Cái thói đòi được công nhận phiền phức này, không thuyết phục được bằng trăm lời nói sao? Vậy thì tôi sẽ để <ruby>trăm mối địch ý<rp>(</rp><rt>.............</rt><rp>)</rp></ruby> tha hồ mà dồn sự chú ý vào cô ta!!!
+
+“Nghi vấn: Đi đâu?”
+
+“Đương nhiên rồi……… ”
+
+Một kiểu thói quen của <ruby>gã này<rp>(</rp><rt>Sanraku</rt><rp>)</rp></ruby> mà, khi gặp rắc rối về tiền bạc hay thiếu nguyên liệu thì cứ tìm <ruby>người bạn thân<rp>(</rp><rt>Mabudachi</rt><rp>)</rp></ruby> mà hỏi thôi!!!!
+
+Cắt ngang dòng chảy câu chuyện, giờ thì tiến lên, cùng đi săn bọ cạp nào…!!</pre>
+        </div>
+
+        <p><a href="../index.html">← Quay về danh sách</a></p>
+    </div>
+
+    <script>
+        const contentArea = document.getElementById("contentArea");
+        let defaultSize = 16;
+
+        function changeFontSize(delta) {
+            const current = parseInt(window.getComputedStyle(contentArea).fontSize);
+            contentArea.style.fontSize = (current + delta) + "px";
+        }
+
+        function resetFontSize() {
+            contentArea.style.fontSize = defaultSize + "px";
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+        }
+
+        (function initTheme() {
+            const saved = localStorage.getItem("theme");
+            if (saved === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        })();
+    </script>
+</body>
+</html>

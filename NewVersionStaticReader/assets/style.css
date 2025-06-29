@@ -1,0 +1,156 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 800px;
+    line-height: 1.6;
+    background: #fefefe;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: royalblue;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    white-space: pre-wrap;
+}
+
+/* ---- POST DETAIL ---- */
+.post-title {
+    font-size: 2em;
+    color: darkred;
+}
+
+.post-series {
+    color: gray;
+    font-style: italic;
+}
+
+.post-content {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    background: #f9f9f9;
+    padding: 1em;
+    border-left: 4px solid #ccc;
+}
+
+/* ---- PAGE WRAPPER ---- */
+.page-wrapper {
+    max-width: 800px;
+    margin: auto;
+    padding: 2em;
+    background: #fff;
+    font-family: sans-serif;
+}
+
+.page-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.series-filter {
+    margin-bottom: 1.5em;
+}
+
+/* ---- POST ITEM ---- */
+.post-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-link {
+    font-size: 1.2em;
+    color: darkblue;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+
+/* ---- PAGINATION ---- */
+.pagination {
+    margin: 1.5em 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pagination a,
+.pagination span {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* ---------------------- */
+/* 📱 RESPONSIVE MOBILE 📱 */
+/* ---------------------- */
+@media (max-width: 600px) {
+    body {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .post-title {
+        font-size: 1.4em;
+    }
+
+    .page-title {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .post-content {
+        font-size: 1em;
+        padding: 0.8em;
+    }
+
+    .series-filter select {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .pagination {
+        font-size: 0.9em;
+        
+    }
+
+    .pagination a,
+    .pagination span {
+        padding: 5px 8px;
+        min-width: 26px;
+    }
+
+    pre {
+        font-size: 0.95em;
+        overflow-x: auto;
+    }
+
+    .page-wrapper {
+        padding: 1.2em;
+    }
+
+    .post-link {
+        font-size: 1em;
+    }
+}
+
+

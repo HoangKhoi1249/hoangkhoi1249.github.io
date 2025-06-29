@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>423_LỰC LƯỢNG ĐẶC NHIỆM NGOÀI LUỒNG</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        .controls {
+            margin: 1em 0;
+            display: flex;
+            gap: 1em;
+        }
+
+        .theme-toggle, .font-controls button {
+            cursor: pointer;
+            padding: 6px 10px;
+            font-size: 1em;
+        }
+
+        body.dark-mode {
+            background-color: #111;
+            color: #eee;
+        }
+
+        body.dark-mode a { color: #80bfff; }
+        body.dark-mode pre { background: #1e1e1e; color: #eee; }
+    </style>
+</head>
+<body>
+    <div class="post-detail">
+        <div class="controls">
+            <button class="theme-toggle" onclick="toggleTheme()">🌗 Chuyển theme</button>
+            <div class="font-controls">
+                <button onclick="changeFontSize(1)">A+</button>
+                <button onclick="changeFontSize(-1)">A-</button>
+                <button onclick="resetFontSize()">Mặc định</button>
+            </div>
+        </div>
+
+        <h1 class="post-title">423_LỰC LƯỢNG ĐẶC NHIỆM NGOÀI LUỒNG</h1>
+        <p class="post-series"><i>Bộ: vi - Shangri-la Frontier</i></p>
+        <hr>
+
+        <div class="post-content">
+            <pre id="contentArea">**LỰC LƯỢNG ĐẶC NHIỆM NGOÀI LUỒNG**
+
+Cái sự thật gây sốc về cô nàng tuổi băm mềm mại khiến tôi vui đến run người, nên tôi xin cập nhật đây ạ.
+Giờ thì tôi chỉ còn vỏn vẹn 5 điểm sau khi lấy Kim Cương Tinh, nghĩ lại mà thấy buồn cười (cười khẩy bất lực).
+
+“Tôi bây giờ… đúng vậy, mạnh nhất…!!”
+
+“Này này! Lo chú ý tàn ảnh quá rồi đấy!”
+
+“Xác nhận thị lực động kém, thời gian huấn luyện bị hoãn lại.”
+
+“Ối, sợ quá sợ quá sợ quá!!”
+
+Vừa gặp mặt năm giây đã thảm hại thế này, đúng là không thể xem thường tiềm năng (không phải sức chiến đấu) của tên nhóc này được…
+Tôi, người đang bao bọc lấy luồng hắc lôi, cùng Saiga với bộ đẩy phản lực đang bay vòng vòng theo kiểu hai lớp xung quanh Wimp, khiến cậu ta khóc thút thít. Trong khi đó, tôi gật đầu chào Sammy-chan và thẳng thừng tuyên bố phương hướng hành động.
+
+“Săn nhện và rết.”
+
+“Vậy, tôi ngủ đây, cố gắng lên nhé…”
+
+“Tiếc thật, nhưng quá trình thăng cấp của cậu sẽ tiếp tục song song đấy. Đừng có hài lòng với mấy con số lẻ như cấp 87 mà phải tiến thẳng lên cấp 90 luôn chứ?”
+
+“Khônggg!!!”
+
+“Nhưng thưa <ruby>chủ nhân<rp>(</rp><rt>Master</rt><rp>)</rp></ruby>, xét về hệ sinh thái của Fortress Gargantula, phương pháp huấn luyện dùng Armlet Gargantula có khả năng thất bại rất cao.”
+
+“Gì chứ, chỉ là một buổi học ngoại khóa thôi mà.”
+
+Theo như mô tả, những con nhện pháo đài này điều khiển nhện con bằng pheromone hoặc một thứ tương tự. Dù dưới biển sâu cũng có loài tương tự, nhưng giờ thì chuyện đó không quan trọng.
+Nghĩa là, nếu Fortress Gargantula dốc hết sức, tất cả Armlet Gargantula sẽ biến thành tử binh… hay đúng hơn là vật phẩm tiêu hao, lao thẳng vào kẻ thù để cảm tử.
+
+“Nghe kỹ đây? Về cơ bản, việc chỉ đối đầu với một trong hai loài nhện hoặc rết là bất khả thi. Nếu một con thức dậy, con còn lại cũng sẽ kích hoạt. Nhưng ngược lại, chính bản thân chúng lại là thứ thu hút sự chú ý của nhau nhiều nhất.”
+
+Nguyên tắc cơ bản của MvM là gây ra việc chúng tự đánh lẫn nhau và can thiệp từ bên ngoài. MvMvP chỉ có thể thành công nếu chỉ số của người chơi không khủng khiếp như quái vật. Đối phó với pháo hỏa xa và pháo đài, người chơi chẳng có mấy lựa chọn đâu.
+
+“Nghe đây, những con Armlet đã nằm dưới sự kiểm soát của Fortress Gargantula sẽ trở nên chậm chạp trước các đòn tấn công không phải từ mục tiêu mà con mẹ đang dồn sự chú ý vào. Nghĩa là, ta cứ tha hồ mà nện chúng.”
+
+“Ơ, ra là thế ư? Hừm, hừm! Nghe có vẻ dễ ợt nhỉ!”
+
+Đúng như dự đoán, Wimp bắt đầu ra vẻ ta đây. Tôi ra hiệu “Suỵt” bảo Saiga, người đang nhìn cậu ta với ánh mắt tội nghiệp, hãy im lặng.
+
+“……Đã rõ:”
+
+Wimp nào có hay, chiến trường cậu ta sắp đặt chân tới, dù không có đòn phản công trực diện, nhưng sẽ có <ruby>đạn lạc<rp>(</rp><rt>.......</rt><rp>)</rp></ruby> bay tứ tung từ các đòn tấn công phạm vi…
+
+“Sammy-chan, khi cần thì ngậm cái đó rồi chạy đi hộ nhé.”
+
+Cứ thế, thiện cảm của tôi với Sammy-chan lại càng tăng cao…
+
+“À, và lịch trực của cậu cũng đã được chốt rồi nhé.”
+
+“Cái gì ạ!?”
+
+Cứ thế, đến giờ họp giao ban.
+
+“Rồi, đây là mấy thứ dùng Tsauberill Đế Bảo Tinh mà tôi đã nhờ làm phòng hờ.”
+
+Dù tôi đã tự ý ghép cặp với Imron, nhưng lại bị Byulac, người đang hừng hực so bì hiệu năng, đấm cho một phát “Đừng có tăng việc cho tôi chứ!”. Mặc dù tôi đã nói là chỉ cần nguyên liệu quan trọng, chứ hiệu năng thì sao cũng được mà.
+
+Tôi và Emul, những người được hệ thống nhận diện là NPC, sẽ dùng phụ kiện. Còn Saiga, dù là NPC nhưng không có khe phụ kiện, thay vào đó sẽ dùng một bộ phận mở rộng chức năng có tên “Bộ đẩy đôi tăng cường”.
+Thế nên, Wimp – người mà tôi cũng chẳng rõ là NPC hay quái vật Mob, và cô Sammy-chan – một Mob kẻ thù đúng nghĩa, thì đành chịu thôi…
+
+“Cái gì đây?”
+
+“Tiền tươi Tsauberill Đế Bảo Tinh.”
+
+“Giấu ngay!!”
+
+Sau nhiều thử nghiệm, hóa ra con quái vật độc nhất (đáng ngờ) này cũng được hệ thống nhận định là NPC vì nó có thể tham gia tổ đội.
+Nếu đã vậy, tôi liền đưa cho chúng những món phụ kiện đã làm sẵn phòng hờ. Tsauberill… hay đúng hơn là những khoáng vật thuộc hệ Bọ Cạp Tinh Thể đều có đặc tính chung là tích trữ ma lực.
+Tuy nhiên, đúng là tầm cỡ Crystal Emperor, những vật phẩm làm từ Tsauberill Đế Bảo Tinh đều sở hữu một vài đặc tính kỳ lạ, nhưng cái vỏ mới là quan trọng, và có lẽ lần này cái tính "dị" đó sẽ không được tận dụng.
+
+“Về nội dung tác chiến, lần này chúng ta sẽ theo phương án cản trở Fortress Gargantula để Treynor Centipede <ruby>giành chiến thắng<rp>(</rp><rt>....</rt><rp>)</rp></ruby>. Tôi sẽ trực tiếp áp sát nó, Emul cưỡi Saiga hỗ trợ, Saiga cũng thế, còn Wimp, cậu hãy tiêu diệt càng nhiều Armlet càng tốt.”
+
+Còn Sammy-chan sẽ là hậu phương, phòng khi có việc khẩn cấp. Cô ấy sẽ nấp kỹ với khả năng tàng hình siêu việt, và khi có biến, sẽ thu hồi Wimp rồi rút về đây.
+
+“Vậy thì, bắt đầu tác chiến!!”
+
+Shangri-La Frontier có thời tiết thay đổi gần như song song với thời gian thực ở Nhật Bản. Dù không thể nói là y hệt, nhưng đến mức tạo ra cả mưa thì quả là một thế giới chân thực đến quái dị.
+Hiện tại, ngoài đời thực là sáu rưỡi tối. Thung lũng tiền tuyến Sigmonia đang chìm trong sắc đỏ hoàng hôn, và từ giờ, chúng tôi sẽ châm ngòi lửa vào nơi vốn tĩnh lặng này.
+
+“Saiga!!”
+
+“Đã rõ: Bắt đầu hành động phô trương lực lượng.”
+
+Dù có bộ đẩy, nhưng không có cơ giáp chiến thuật thì Saiga dường như chỉ có thể bay cao hết mức bằng cách nhảy vọt lên. Thế nhưng, Saiga vẫn nhảy vọt lên độ cao khoảng mười mét, chĩa hai khẩu súng lục trang bị trên tay xuống đất… và khai hỏa.
+
+“Wimp! Đừng cố gắng tiêu diệt bằng mọi giá, hãy tích lũy điểm một cách vững chắc!!”
+
+“Không cần nói tôi cũng làm thế màaa!!”
+
+Vậy thì tốt quá rồi, này… tiếc là tôi không mang theo kèn ốc, nên cứ tạm lấy tiếng súng làm hiệu lệnh khai chiến vậy nhé.
+
+Mặt đất nứt toác ra kêu răng rắc. Nhìn quanh, tôi thấy những con Armlet Gargantula nhỏ bé đang ngoi đầu lên từ lòng đất, nhưng dù có bao nhiêu con li ti này cử động thì cũng không thể tạo ra rung chấn… rung lắc đủ sức xé nát tận cùng lòng đất như thế này được.
+
+Những vết nứt trên mặt đất đạt đến giới hạn, phá vỡ tầng đất và từ bên dưới, một lớp giáp siêu nặng khổng lồ dần hiện ra, phủi đi đất cát bám trên mình.
+À thì ra là vậy, hình dáng đó quả đúng là xứng danh <ruby>Pháo Hỏa Xa<rp>(</rp><rt>Gustav</rt><rp>)</rp></ruby>. Nhắc đến thân hình khổng lồ cỡ tàu hỏa, tôi lại nhớ đến <ruby>Gigalyug<rp>(</rp><rt>Arcturus</rt><rp>)</rp></ruby> <ruby>Unotsukai<rp>(</rp><rt>Regalex</rt><rp>)</rp></ruby>, nhưng khác với con đó chỉ mỏng về chiều dọc, con này có bề ngang cũng ấn tượng lắm.
+
+Ngước nhìn Treynor Centipede Gustav đang cọ xát những lớp giáp với nhau kêu kẽo kẹt, ngẩng đầu lên từ sâu dưới lòng đất, tôi tiếp tục tìm kiếm một vị trí khác đang khiến mặt đất rung chuyển.
+
+“Áaaa! Hứaaa! Bọn chúng kéo đến kìaaa!!”
+
+<ruby>Câm miệng<rp>(</rp><rt>Tắt tiếng</rt><rp>)</rp></ruby> đi đồ nhát gan… Ở đó ư?!!
+
+“Bắt đầu tác chiến! Saiga, Emul! Tuyệt đối đừng để bị cuốn vào đấy nhé!!”
+
+“Vâng ạ!”
+
+“Đã rõ:”
+
+Hổ phụ sinh hổ tử, khi rồng đã xuất hiện thì hổ cũng sẽ đứng lên. Sau khi xác nhận một con nhện khổng lồ khác cũng xé toạc mặt đất mà hiện ra, tôi liền hòa vào đám Armlet – có lẽ đã bị Fortress kiểm soát bằng pheromone – rồi lao thẳng về phía con pháo đài khổng lồ kia.
+
+“K, không nhìn về phía này sao? Kh, khà khà khà… giờ đây là sân chơi của tôi ááá!?”
+
+Hình như Wimp đã bị thổi bay bởi dư chấn từ đòn tấn công của con rết, nhưng Sammy-chan vẫn chưa ra tay nên chắc là vẫn an toàn.
+Tôi đá bay những con Armlet đang bò lên những chiếc chân sau của Fortress như cột nhà, biến chúng thành bàn đạp để leo lên, cứ thế lao vút lên trên. Dù có thể dùng Tốc độ giới hạn, nhưng chiêu đó thích hợp hơn cho việc rút lui và tấn công bất ngờ.
+Armlet Gargantula, với kích thước tương đương một người, sở hữu sức mạnh đáng nể. Ít nhất thì chúng không yếu ớt đến mức chỉ bị một người đá nhẹ là rơi ra đâu.
+
+Chợt nhận ra thì tôi đã ở trên đỉnh, chạm tới nóc bụng của Fortress Gargantula. Tôi siết chặt Aradval Rebuild, và khởi đầu là chém, rồi đá văng con Armlet đang cố gắng chui vào “tháp pháo” gần đó.
+Con nhện con bị lưỡi hỏa thiểm xẻ toạc lăn lông lốc, cuốn theo cả lũ phía sau và đâm sầm vào nhau một cách ngoạn mục.
+
+“Pháo mà không có đạn thì chỉ là đồ trang trí thôi đúng không!?”
+
+Việc gây sát thương hỏa lực cứ giao cho Gustav. Còn chúng ta, nói đúng hơn là một đội công binh, sẽ luồn ra phía sau để tiêu hao hết kho đạn dự trữ của chúng.
+
+“Cảnh báo: Xác nhận cơ bắp của Treynor Centipede Gustav đang phồng lên, nó sắp tấn công.”
+
+“Đã rõ!!”
+
+Rầm một tiếng, con rết khổng lồ quấn lấy con nhện, xé toạc không khí hoàng hôn. Những lớp giáp dày cộm của chúng ghì vào nhau kêu ken két như đang so bì độ cứng. Để chống lại cú siết chặt của con rết, con nhện gồng chân lại, và từ “tháp pháo” ngoài tầm tấn công của tôi, những con nhện con liên tục được bắn ra.
+
+“【Ma Lực Lưỡi Kiếm】!!”
+
+“Bắt đầu khai hỏa, sẽ bắn hạ.”
+
+Tuy nhiên, những đòn tấn công tương tự cũng được phóng ra từ bụng của nó, bắn hạ một phần những con Armlet đóng vai trò đạn dược. Thế là, màn mưa đạn thưa thớt, lỗ chỗ trúng vào Gustav, phát tán xung kích và nổ tung.
+So sánh với tôi thì hơi khập khiễng, nhưng đây là đòn tự sát có thể thổi bay người chơi cấp độ 100 trở lên chỉ với một phát. Một hai con thì chẳng thấm vào đâu, nhưng nếu lên đến con số hàng chục, ít nhất cũng có thể khiến đối thủ choáng váng.
+Khi Gustav ngửa người ra sau khiến sự kìm kẹp nới lỏng, tôi không bỏ lỡ khoảnh khắc đó. Những chiếc chân của Fortress Gargantula, trông như những cây cột… hay đúng hơn là những cái cọc khi nhìn từ xa, đã giẫm mạnh lên cơ thể Gustav, dùng khối lượng cực lớn nghiền nát và xuyên thủng lớp giáp cứng cáp.
+
+“Tất cả rút lui!!”
+
+“Người búp bê! Người búp bê!”
+
+“<ruby>Tôi<rp>(</rp><rt>Thiết bị này</rt><rp>)</rp></ruby> xin thông báo với sinh vật bản địa tên Emul rằng cách gọi “Saiga” là phù hợp hơn. Đang thực hiện động tác rút lui.”
+
+“Hô biyaaa…!!”
+
+Tiễn biệt Emul đang trong tình trạng thê thảm do Saiga rút lui bằng cú nhào lộn, tôi cũng dồn lực vào chân để thoát thân.
+
+“Này cậu Gustav, nếu muốn nhắm thì chỗ này là tuyệt nhất đấy nhé?”
+
+Chắc là tôi nhầm lẫn thôi, nhưng tôi vẫn vẫy vẫy thanh Aradval để thu hút sự chú ý của con rết khổng lồ mà tôi vừa chạm mắt.
+“Pháo chính” to lớn đến mức khiến những “tháp pháo” của Fortress mọc trên lưng trông nhỏ bé, được chĩa thẳng vào con nhện. Ngay sau khi tôi rút lui thẳng đứng lên bằng <ruby>Tốc độ giới hạn<rp>(</rp><rt>Bladion</rt><rp>)</rp></ruby>, một quả đạn độc khổng lồ từ “pháo chính” của Gustav đã bắn trúng chính giữa hông con nhện pháo đài.
+
+“Tuyệt vời!!!”
+
+Nào, hãy từng bước một chắc chắn dồn ép, hạ gục pháo đài thôi!
+
+***
+
+Những Búp Bê Chinh Phục và Human Dragora có khe trang bị riêng biệt thay vì khe phụ kiện thông thường.
+Đối với Búp Bê Chinh Phục, đây là những bộ phận bổ sung. Chúng khá quan trọng vì có ảnh hưởng không chỉ khi ở trạng thái nguyên bản mà còn cả khi trang bị giáp cường hóa. Đương nhiên, để chế tạo mới những bộ phận này cần đến sự nhúng tay của những Cổ Thợ bậc thầy… dù cũng không phải là không có cách nào khác.
+Đối với Human Dragora, chúng có thể trang bị thuốc dinh dưỡng, và có thể nhận được các hiệu ứng cường hóa bổ sung vào thời điểm tùy chọn hoặc ngẫu nhiên. Đây là vật phẩm mà những nghề cấp cao nhất thuộc nhánh “Nông Dân”, hoặc nghề ẩn “Dược Sĩ” có thể chế tạo.</pre>
+        </div>
+
+        <p><a href="../index.html">← Quay về danh sách</a></p>
+    </div>
+
+    <script>
+        const contentArea = document.getElementById("contentArea");
+        let defaultSize = 16;
+
+        function changeFontSize(delta) {
+            const current = parseInt(window.getComputedStyle(contentArea).fontSize);
+            contentArea.style.fontSize = (current + delta) + "px";
+        }
+
+        function resetFontSize() {
+            contentArea.style.fontSize = defaultSize + "px";
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+        }
+
+        (function initTheme() {
+            const saved = localStorage.getItem("theme");
+            if (saved === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        })();
+    </script>
+</body>
+</html>
