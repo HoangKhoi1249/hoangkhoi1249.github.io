@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>📖 Novel Storage - Đang phát triển</title>
+  <meta charset="UTF-8">
+  <title>Trình Đọc Markdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1e293b;
-      color: #f8fafc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .container {
-      max-width: 600px;
-      background-color: #0f172a;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      font-family: "Segoe UI", sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      background-color: #fdfdfd;
+      color: #222;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    p {
-      font-size: 1.1rem;
-      color: #cbd5e1;
-      margin-bottom: 2rem;
+    select {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 300px;
     }
 
-    .emoji {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      background-color: #22c55e;
-      color: white;
-      border: none;
+    #reader {
+      background-color: white;
+      padding: 25px;
       border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
-    button:hover {
-      background-color: #16a34a;
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="emoji">📚</div>
-    <h1>Trang web đang được xây dựng, mong bạn quay lại sau.</h1>
-    <h2>Liên hệ: nghiemdinhkhoinguyen@gmail.com</h2>
-    
+  <h1>📖 Trình Đọc Web Markdown</h1>
+
+  <select onchange="loadChapter(this.value)">
+    <option value="">-- Chọn chương --</option>
+    <option value="chapter1.md">Chương 1: Mở đầu</option>
+  </select>
+
+  <div id="reader">
+    <p>Chọn một chương ở trên để bắt đầu đọc.</p>
   </div>
+
+  <script>
+    async function loadChapter(filename) {
+      if (!filename) return;
+
+      try {
+        const response = await fetch('chapters/' + filename);
+        if (!response.ok) throw new Error('Không thể tải chương');
+
+        const md = await response.text();
+        document.getElementById('reader').innerHTML = marked.parse(md);
+      } catch (error) {
+        document.getElementById('reader').innerHTML = '<p style="color:red;">Lỗi: Không thể tải chương!</p>';
+        console.error(error);
+      }
+    }
+  </script>
 </body>
 </html>
