@@ -1,78 +1,189 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Chapter - 724 - Face Off (1) 1</title>
-    <link rel="stylesheet" href="../assets/style.css">
-    <style>
-        .controls {
-            margin: 1em 0;
-            display: flex;
-            gap: 1em;
-        }
+  <script>
+    (function() {
+    const f = localStorage.getItem("font") || "sans";
+    const s = localStorage.getItem("size") || "18";
+    const theme = localStorage.getItem("theme");
+    let cls = `font-${f} size-${s}px`;
+    if (theme === "dark") cls += " dark";
+    document.write(`<body class="${cls}">`);
+  })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter - 724 - Face Off (1) 1</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    body { margin: 40px; }
 
-        .theme-toggle, .font-controls button {
-            cursor: pointer;
-            padding: 6px 10px;
-            font-size: 1em;
-        }
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --link-color: royalblue;
+    }
+    body.dark {
+      --bg-color: #111111;
+      --text-color: #eeeeee;
+      --link-color: #4ea1ff;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .theme-toggle {
+      text-align: right;
+    }
+    .theme-toggle button {
+      padding: 4px 10px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--link-color);
+      color: var(--link-color);
+      border-radius: 4px;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
 
-        body.dark-mode {
-            background-color: #111;
-            color: #eee;
-        }
+    body.sans  { font-family: sans-serif; }
+    body.serif { font-family: 'Times New Roman', serif; }
+    body.mono  { font-family: monospace; }
 
-        body.dark-mode a { color: #80bfff; }
-        body.dark-mode pre { background: #1e1e1e; color: #eee; }
-    </style>
+
+
+    .size-16px { font-size: 16px; }
+    .size-18px { font-size: 18px; }
+    .size-20px { font-size: 20px; }
+    .size-22px { font-size: 22px; }
+    .size-24px { font-size: 24px; }
+    .size-26px { font-size: 26px; }
+    .size-28px { font-size: 28px; }
+    .size-30px { font-size: 30px; }
+    .size-32px { font-size: 32px; }
+    .size-34px { font-size: 34px; }
+
+    .font-options {
+      margin-bottom: 1em;
+      font-size: 0.95em;
+    }
+    .font-options a {
+      color: royalblue;
+      text-decoration: none;
+      margin-right: 6px;
+    }
+    .font-options a:hover { text-decoration: underline; }
+  </style>
 </head>
-<body>
-    <div class="post-detail">
-        <div class="controls">
-            <button class="theme-toggle" onclick="toggleTheme()">🌗 Chuyển theme</button>
-            <div class="font-controls">
-                <button onclick="changeFontSize(1)">A+</button>
-                <button onclick="changeFontSize(-1)">A-</button>
-                <button onclick="resetFontSize()">Mặc định</button>
-            </div>
-        </div>
-
-        <h1 class="post-title">Chapter - 724 - Face Off (1) 1</h1>
-        <p class="post-series"><i>Bộ: en - Infinite Mage</i></p>
-        <hr>
-
-        <div class="post-content">
-            <pre id="contentArea">[724] Face Off (1)Labyrinth Andre – World No. 283.Sirone suddenly realized.’Immortal function.’The solution to the problem he had been thinking about for days was permeating through the circuit of insight.The only way to break Andre’s seal was to open up this world by expanding his mind to infinity.’but… … Why should I?’What is the difference between suicide and suicide?”we are! today! try hard! It works!”Worker ants emitting cheerful pheromones were carrying food in rows as far as the eye could see.At Queen Garnet’s suggestion, Sirone was also on the move carrying the flesh of dead insects.“Sirone, don’t you enjoy working?”The worker ants that overtook the heat turned to Sirone, who was lost in thought, releasing pheromones.“Yes, of course.”Wiping the sweat, Sirone smiled.“It’s not good to be preoccupied with thoughts. Because when you get lost in thoughts within your thoughts, you lose sight of what really matters.”“What really matters? what is that?”“Well, maybe that’s why you’re thinking?”“… … .”As Sirone stopped walking and blinked, the worker ant continued to speak while shaking off the soil.“When you actually encounter something, you find that it’s not quite what you thought it would be. Sometimes not thinking is the answer.”’Thoughts in thoughts… … .’The nature imprinted in the genes of minor creatures contained their own definition of cowardice.-Garnet Colony is not complicated.The Queen’s words echoed in my head.“Thank you for your hard work today!”Arriving at the Garnet Colony after finishing her day, Sirone washed herself in the drinking water cellar.It’s unusual for ants that communicate with pheromones, but Sirone was a human.’I worked hard, so maybe I can use a little bit.’After wiping off the soil and going down to the basement of the colony, noble ants were occupying the alley.All of them were male ants, and they were full of hostility toward Sirone, who was resting in the territory of the princess ants.“Can you get out of the way?”As Sirone advanced, he could feel the web of murder they had spread on his skin.Darane, who had a bad first impression, stood in the way.“Do you think you get special treatment? you’re welcome. You are the plaything of princesses. The moment you get tired of it, it becomes food.”Whenever she comes into contact with a wild life that lacks humanity, Sirone knows where she is.’It’s just acting according to nature.’So I can’t blame them.“Get out of the way. I understand how you feel, but I’m a different species. I have no reason to argue with you guys.”“You know what? It’s getting difficult to procure food for the Garnet Colony right now. It’s because the army ants have expanded their territory.””so?”Darane’s chin was aimed at Sirone.“I want to see how rich human nutrients are. Because that is the role of nobles.”There were already frequent local wars, and the aristocrats who had to inherit the descendants were extremely sensitive.‘There is nothing insignificant, but… … .’Sirone’s life was not insignificant.”Move. I am the Queen’s special guest. Would that have been the order?”“Even in peacetime. If the exhibition… … .”When Darane opened his jaw like scissors, the pheromone of the 13th night erupted from behind the noble ants.“Stop it.”The male ants, who were offended by that alone, looked back and saw that the 13th night was exuding a vicious energy.Darane pushed the nobles away and approached.“Did you just give the noble an order? Do we look easy enough just because we wander around the battlefield?”On the 13th night of winning the local battle today, countless wounds were engraved on the body.“This is an advice for Daranne. That human is the Queen’s guest, and above all else, he is the strongest.”It meant that the aristocrats who had never experienced combat were no match for them.”joy! Is it because you use the same thing? That means I have to obey you too.”“Don’t misunderstand. This is the message from Princess Merott. He told me not to have any inconvenience in my stay.”If Merott, the first in the princess hierarchy, had delivered, the nobles would not have been able to lay a hand on Sirone.“Good. Why don’t you hurry up and fawn?”Following the path opened by Darane, Sirone descended underground and sighed as she left the aristocratic area.”thank you. Thanks to you, I avoided a fight.”A soldier is an existence that follows the orders of a nobleman, but on the 13th night, he was an ant who realized the art of incarnation.“The herpes of the army ants is not serious. The atmosphere is messy. Be on your own for the time being.”When the 13th night was over and we arrived at the inn, a completely different hospitality from the aristocratic district followed.“Come on, Sirone. Was it hard?”In an instant, the princesses who gathered around Sirone released chatty pheromones.“How was the world outside? Were there many dead insects?”“What color was the sun? Color 2837?”When Merott appeared, the princesses moved aside in unison.“You were safe. It’s good, sirone.”The local war that took place near the colony was a hot topic even among the princesses.“Army ants are different from us. Instead of minimizing the labor force, it mass-produces numerous soldier ants.”On the way to the inn, Merott informed me of the situation.“We expand our territory by occupying colonies like that. If an all-out war breaks out, the damage will be great.”However, it was impossible to move the colony.“If there is a war, then I will fight too. But sirone, you don’t have to be in the colony.”The situation seemed more serious than I thought.”You don’t have to get involved in a war. If you want to leave, leave tonight. I will allow you.”“Melot… … .”Ants are small creatures.At least to Sirone, who lived in the human world, he was not precious enough to sacrifice his life.’Is there a better value in life?’Returning to the inn, Sirone lay down on the dirt floor with an arm pillow and was lost in thought.’I don’t want to disappear like this.’What if I showed someone an ant and asked them to die for it?It was clear that if he was joking, he would be treated like a madman, and if he was serious, he would get slapped.’No, not because it’s an ant. Because there is nothing more precious than your own life. There must be another way.’It would be the same for Sirone, who was exploring another world, but there was no way he would open Immortal Function.how long have you been sleepingAt the sound of thunder outside, Sirone slowly raised her eyelids.’Is it raining?’This was the lowest level of the colony.”It’s not raining!”When Sirone jumped up and took out the artificial brain and others, a huge amount of information began to be transmitted.“Stop! Protect the Queen’s room!”“Kieek! Get out of here, ugly things!”When Sirone jumped up and jumped out of the dorm using the recoil, a bizarre sight unfolded that made his heart stop.’Army ant.’Its body was twice as large as the Garnet Colony’s soldiers, and its head was even three times as large.The powerful jaws on its massive head knocked the ants’ necks off each time they crossed.“I can’t die yet! Protect me!”All the male ants on the upper floor started to run away from the attack of the army ants that invaded at night.They are usually aristocrats who show off their enormous size, but they were no match for the giant army ant.“Where are the soldiers! Protect me quickly!”Darane emitted frightened pheromones, but only army ants swarmed.“Die, you insignificant races!”“Quaaaaaa!”The thirteenth night flew in just as Daranen’s body, buried by the army ants, turned over.Law of the Earth – Ant Hell.As the landscape was denied, the bodies of the army ants that were biting Darane were torn to pieces.”you… … .”Darane refused to be supported with the pride of the last remaining nobleman, but he was already unable to move.“Sirone.”The thirteenth night looked back at Sirone.“I will protect the queen.”Since the queen could not move along the colony, she was the most unnecessary being in an attacking situation.“Because I am on the 13th night.”It was a happy life to be able to have a name.”wait! You don’t have to protect me! The queen has already… … !”As the thirteenth night left behind Darane’s pheromone, Sirone suddenly came to his senses.“Melot!”Army ants were already roaming around the princess’s residence, and screams could be heard from all directions.“Melot! Mero… … !”Upon arriving at the residence, three army ants were holding Merott down and strangling him.As if playing a prank, I felt my hair stand on end as I pressed my sharp jaw under her chin.“Sirone… … .”Finding Sirone, Merott opened his jaw.“Run away! Run quickly!”At that moment, what came to Sirone’s mind.’If anything really happens… … .’- You will find out that it is completely different from what you thought.It was the pheromone of an unknown worker ant.“Run away! You shouldn’t be here!”As Merott desperately grabbed the army ant, the ant biting under his chin tensed his body.“Stay still! I’ll cut your throat!”Right before Merott’s throat was cut, the flash of a photon cannon flew in and hit the army ant’s head.Colleagues who identified the fallen army ant with their antennae raised their upper bodies and shouted.”what! To say that there is such a paper… … !”Before the pheromone was even sprayed, the army ants that were hit by the photon cannon were pinned to the wall.’If you look into it, everyone has the same life.’High and low are meaningless to beings who are born endlessly circulating the kalpa of reincarnation.’The same goes for those ants.’Realizing how to stop the war, Sirone approached Merott and held out her hand.”are you okay? Can you move?”“Sirone… … What about that from a moment ago?”I heard about magic, but I didn’t know it had such powerful power.“Let’s go out. There is something I want to show you.”There was no reason to delay any longer.* * *Labyrinth Andre – World No. 847.“Kill! We’ll pay for what we’ve been through!”Syrone’s code is 427,621.Numerous citizens stormed the temple after realizing that there was no one with authority in the codename anymore.“Damn it! Let go! Touch me on the subject of 800,000 codes!”Gale, who was being beaten with a stick, couldn’t stand it and struggled, but the fist flew in without a doubt.”shut up! what’s the difference between you and me He must have bullied me for being a little higher than that!”Gail, who harassed countless women under the pretext of the high code number 9, was the most miserable to suffer.However, the resentment that the residents of the lower codes had was not limited to those who suffered directly.“Kill them all! I mean, they’re all going to die!”Drain, once the king of code names, was already lying unconscious, but the kicking didn’t stop.“You are the worst! you! you!”In a situation where even the standard of how high a ranking was has disappeared, people were just destroying everything in sight.”Sirone, I’m scared… … .”Panica hid behind Sirone’s back and trembled.”are you okay. Because I am.”In a world where ranking discrimination disappeared, Sirone was the only one who could use authority.That’s why the residents couldn’t even dare to approach Sirone, but it had long since lost its meaning.’There is no ranking for humans.’There is no standard of being noble from here and low from there.“Sirone? Where?”At Panika’s question, Sirone smiled sadly.“Because there is no good life without saving it.”Sirone opened her arms wide as if embracing the whole world and slowly closed her eyes.A single tear flowed down again.’May everyone be happy.’There was no reason to delay any longer.=======================================
-</pre>
-        </div>
-
-        <p><a href="../index.html">← Quay về danh sách</a></p>
+<body class="sans size-20">
+    <div class="container">
+        <div class="theme-toggle">
+      <button id="toggle-theme">🌙 / ☀</button>
     </div>
 
-    <script>
-        const contentArea = document.getElementById("contentArea");
-        let defaultSize = 16;
 
-        function changeFontSize(delta) {
-            const current = parseInt(window.getComputedStyle(contentArea).fontSize);
-            contentArea.style.fontSize = (current + delta) + "px";
-        }
+  <div class="font-options">
+    <strong>Phông chữ:</strong>
+    <a href="?font=sans">Sans</a> |
+    <a href="?font=serif">Serif</a> |
+    <a href="?font=mono">Mono</a>
+    <br><br>
+    <strong>Cỡ chữ:</strong>
+    
+      <a href="?font=sans&size=16">16px</a> | 
+    
+      <a href="?font=sans&size=18">18px</a> | 
+    
+      <a href="?font=sans&size=20">20px</a> | 
+    
+      <a href="?font=sans&size=22">22px</a> | 
+    
+      <a href="?font=sans&size=24">24px</a> | 
+    
+      <a href="?font=sans&size=26">26px</a> | 
+    
+      <a href="?font=sans&size=28">28px</a> | 
+    
+      <a href="?font=sans&size=30">30px</a> | 
+    
+      <a href="?font=sans&size=32">32px</a> | 
+    
+      <a href="?font=sans&size=34">34px</a>
+    
+  </div>
 
-        function resetFontSize() {
-            contentArea.style.fontSize = defaultSize + "px";
-        }
+  <div class="post-nav">
+    
+        <a href="../posts/chapter-723-the-world-we-live-in-4-1.html">⬅ Bài trước</a>
+    
+    
+        <a href="../posts/chapter-725-face-off.html">Bài sau ➡</a>
+    
+</div>
+  <div style="text-align: center;">
+    <a href="../index.html">← Quay về danh sách</a>
+  </div>
 
-        function toggleTheme() {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
-        }
 
-        (function initTheme() {
-            const saved = localStorage.getItem("theme");
-            if (saved === "dark") {
-                document.body.classList.add("dark-mode");
-            }
-        })();
-    </script>
+  <h1>Chapter - 724 - Face Off (1) 1</h1>
+  <p><i>Bộ: en - Infinite Mage</i></p>
+  <hr>
+  <pre>[724] Face Off (1)Labyrinth Andre – World No. 283.Sirone suddenly realized.’Immortal function.’The solution to the problem he had been thinking about for days was permeating through the circuit of insight.The only way to break Andre’s seal was to open up this world by expanding his mind to infinity.’but… … Why should I?’What is the difference between suicide and suicide?”we are! today! try hard! It works!”Worker ants emitting cheerful pheromones were carrying food in rows as far as the eye could see.At Queen Garnet’s suggestion, Sirone was also on the move carrying the flesh of dead insects.“Sirone, don’t you enjoy working?”The worker ants that overtook the heat turned to Sirone, who was lost in thought, releasing pheromones.“Yes, of course.”Wiping the sweat, Sirone smiled.“It’s not good to be preoccupied with thoughts. Because when you get lost in thoughts within your thoughts, you lose sight of what really matters.”“What really matters? what is that?”“Well, maybe that’s why you’re thinking?”“… … .”As Sirone stopped walking and blinked, the worker ant continued to speak while shaking off the soil.“When you actually encounter something, you find that it’s not quite what you thought it would be. Sometimes not thinking is the answer.”’Thoughts in thoughts… … .’The nature imprinted in the genes of minor creatures contained their own definition of cowardice.-Garnet Colony is not complicated.The Queen’s words echoed in my head.“Thank you for your hard work today!”Arriving at the Garnet Colony after finishing her day, Sirone washed herself in the drinking water cellar.It’s unusual for ants that communicate with pheromones, but Sirone was a human.’I worked hard, so maybe I can use a little bit.’After wiping off the soil and going down to the basement of the colony, noble ants were occupying the alley.All of them were male ants, and they were full of hostility toward Sirone, who was resting in the territory of the princess ants.“Can you get out of the way?”As Sirone advanced, he could feel the web of murder they had spread on his skin.Darane, who had a bad first impression, stood in the way.“Do you think you get special treatment? you’re welcome. You are the plaything of princesses. The moment you get tired of it, it becomes food.”Whenever she comes into contact with a wild life that lacks humanity, Sirone knows where she is.’It’s just acting according to nature.’So I can’t blame them.“Get out of the way. I understand how you feel, but I’m a different species. I have no reason to argue with you guys.”“You know what? It’s getting difficult to procure food for the Garnet Colony right now. It’s because the army ants have expanded their territory.””so?”Darane’s chin was aimed at Sirone.“I want to see how rich human nutrients are. Because that is the role of nobles.”There were already frequent local wars, and the aristocrats who had to inherit the descendants were extremely sensitive.‘There is nothing insignificant, but… … .’Sirone’s life was not insignificant.”Move. I am the Queen’s special guest. Would that have been the order?”“Even in peacetime. If the exhibition… … .”When Darane opened his jaw like scissors, the pheromone of the 13th night erupted from behind the noble ants.“Stop it.”The male ants, who were offended by that alone, looked back and saw that the 13th night was exuding a vicious energy.Darane pushed the nobles away and approached.“Did you just give the noble an order? Do we look easy enough just because we wander around the battlefield?”On the 13th night of winning the local battle today, countless wounds were engraved on the body.“This is an advice for Daranne. That human is the Queen’s guest, and above all else, he is the strongest.”It meant that the aristocrats who had never experienced combat were no match for them.”joy! Is it because you use the same thing? That means I have to obey you too.”“Don’t misunderstand. This is the message from Princess Merott. He told me not to have any inconvenience in my stay.”If Merott, the first in the princess hierarchy, had delivered, the nobles would not have been able to lay a hand on Sirone.“Good. Why don’t you hurry up and fawn?”Following the path opened by Darane, Sirone descended underground and sighed as she left the aristocratic area.”thank you. Thanks to you, I avoided a fight.”A soldier is an existence that follows the orders of a nobleman, but on the 13th night, he was an ant who realized the art of incarnation.“The herpes of the army ants is not serious. The atmosphere is messy. Be on your own for the time being.”When the 13th night was over and we arrived at the inn, a completely different hospitality from the aristocratic district followed.“Come on, Sirone. Was it hard?”In an instant, the princesses who gathered around Sirone released chatty pheromones.“How was the world outside? Were there many dead insects?”“What color was the sun? Color 2837?”When Merott appeared, the princesses moved aside in unison.“You were safe. It’s good, sirone.”The local war that took place near the colony was a hot topic even among the princesses.“Army ants are different from us. Instead of minimizing the labor force, it mass-produces numerous soldier ants.”On the way to the inn, Merott informed me of the situation.“We expand our territory by occupying colonies like that. If an all-out war breaks out, the damage will be great.”However, it was impossible to move the colony.“If there is a war, then I will fight too. But sirone, you don’t have to be in the colony.”The situation seemed more serious than I thought.”You don’t have to get involved in a war. If you want to leave, leave tonight. I will allow you.”“Melot… … .”Ants are small creatures.At least to Sirone, who lived in the human world, he was not precious enough to sacrifice his life.’Is there a better value in life?’Returning to the inn, Sirone lay down on the dirt floor with an arm pillow and was lost in thought.’I don’t want to disappear like this.’What if I showed someone an ant and asked them to die for it?It was clear that if he was joking, he would be treated like a madman, and if he was serious, he would get slapped.’No, not because it’s an ant. Because there is nothing more precious than your own life. There must be another way.’It would be the same for Sirone, who was exploring another world, but there was no way he would open Immortal Function.how long have you been sleepingAt the sound of thunder outside, Sirone slowly raised her eyelids.’Is it raining?’This was the lowest level of the colony.”It’s not raining!”When Sirone jumped up and took out the artificial brain and others, a huge amount of information began to be transmitted.“Stop! Protect the Queen’s room!”“Kieek! Get out of here, ugly things!”When Sirone jumped up and jumped out of the dorm using the recoil, a bizarre sight unfolded that made his heart stop.’Army ant.’Its body was twice as large as the Garnet Colony’s soldiers, and its head was even three times as large.The powerful jaws on its massive head knocked the ants’ necks off each time they crossed.“I can’t die yet! Protect me!”All the male ants on the upper floor started to run away from the attack of the army ants that invaded at night.They are usually aristocrats who show off their enormous size, but they were no match for the giant army ant.“Where are the soldiers! Protect me quickly!”Darane emitted frightened pheromones, but only army ants swarmed.“Die, you insignificant races!”“Quaaaaaa!”The thirteenth night flew in just as Daranen’s body, buried by the army ants, turned over.Law of the Earth – Ant Hell.As the landscape was denied, the bodies of the army ants that were biting Darane were torn to pieces.”you… … .”Darane refused to be supported with the pride of the last remaining nobleman, but he was already unable to move.“Sirone.”The thirteenth night looked back at Sirone.“I will protect the queen.”Since the queen could not move along the colony, she was the most unnecessary being in an attacking situation.“Because I am on the 13th night.”It was a happy life to be able to have a name.”wait! You don’t have to protect me! The queen has already… … !”As the thirteenth night left behind Darane’s pheromone, Sirone suddenly came to his senses.“Melot!”Army ants were already roaming around the princess’s residence, and screams could be heard from all directions.“Melot! Mero… … !”Upon arriving at the residence, three army ants were holding Merott down and strangling him.As if playing a prank, I felt my hair stand on end as I pressed my sharp jaw under her chin.“Sirone… … .”Finding Sirone, Merott opened his jaw.“Run away! Run quickly!”At that moment, what came to Sirone’s mind.’If anything really happens… … .’- You will find out that it is completely different from what you thought.It was the pheromone of an unknown worker ant.“Run away! You shouldn’t be here!”As Merott desperately grabbed the army ant, the ant biting under his chin tensed his body.“Stay still! I’ll cut your throat!”Right before Merott’s throat was cut, the flash of a photon cannon flew in and hit the army ant’s head.Colleagues who identified the fallen army ant with their antennae raised their upper bodies and shouted.”what! To say that there is such a paper… … !”Before the pheromone was even sprayed, the army ants that were hit by the photon cannon were pinned to the wall.’If you look into it, everyone has the same life.’High and low are meaningless to beings who are born endlessly circulating the kalpa of reincarnation.’The same goes for those ants.’Realizing how to stop the war, Sirone approached Merott and held out her hand.”are you okay? Can you move?”“Sirone… … What about that from a moment ago?”I heard about magic, but I didn’t know it had such powerful power.“Let’s go out. There is something I want to show you.”There was no reason to delay any longer.* * *Labyrinth Andre – World No. 847.“Kill! We’ll pay for what we’ve been through!”Syrone’s code is 427,621.Numerous citizens stormed the temple after realizing that there was no one with authority in the codename anymore.“Damn it! Let go! Touch me on the subject of 800,000 codes!”Gale, who was being beaten with a stick, couldn’t stand it and struggled, but the fist flew in without a doubt.”shut up! what’s the difference between you and me He must have bullied me for being a little higher than that!”Gail, who harassed countless women under the pretext of the high code number 9, was the most miserable to suffer.However, the resentment that the residents of the lower codes had was not limited to those who suffered directly.“Kill them all! I mean, they’re all going to die!”Drain, once the king of code names, was already lying unconscious, but the kicking didn’t stop.“You are the worst! you! you!”In a situation where even the standard of how high a ranking was has disappeared, people were just destroying everything in sight.”Sirone, I’m scared… … .”Panica hid behind Sirone’s back and trembled.”are you okay. Because I am.”In a world where ranking discrimination disappeared, Sirone was the only one who could use authority.That’s why the residents couldn’t even dare to approach Sirone, but it had long since lost its meaning.’There is no ranking for humans.’There is no standard of being noble from here and low from there.“Sirone? Where?”At Panika’s question, Sirone smiled sadly.“Because there is no good life without saving it.”Sirone opened her arms wide as if embracing the whole world and slowly closed her eyes.A single tear flowed down again.’May everyone be happy.’There was no reason to delay any longer.=======================================
+</pre>
+  <hr>
+
+  <div style="text-align: center;">
+    <a href="../index.html">← Quay về danh sách</a>
+  </div>
+
+  <div class="post-nav">
+    
+        <a href="../posts/chapter-723-the-world-we-live-in-4-1.html">⬅ Bài trước</a>
+    
+    
+        <a href="../posts/chapter-725-face-off.html">Bài sau ➡</a>
+    
+  </div>
+
+  <script>
+    const btn = document.getElementById("toggle-theme");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") document.body.classList.add("dark");
+    btn?.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
+
+
+    const params = new URLSearchParams(location.search);
+    const font = params.get("font");
+    const size = params.get("size");
+
+    if (["sans", "serif", "mono"].includes(font)) {
+      document.body.classList.remove("sans", "serif", "mono");
+      document.body.classList.add(font);
+    }
+
+    const validSizes = ["16","18","20","22","24","26","28","30","32","34"];
+    if (validSizes.includes(size)) {
+      validSizes.forEach(sz => document.body.classList.remove("size-" + sz));
+      document.body.classList.add("size-" + size);
+    }
+  </script>
+  </div>
 </body>
 </html>

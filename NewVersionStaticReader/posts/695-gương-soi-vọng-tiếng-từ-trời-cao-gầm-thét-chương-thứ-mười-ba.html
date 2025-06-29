@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>695_GƯƠNG SOI VỌNG TIẾNG, TỪ TRỜI CAO GẦM THÉT CHƯƠNG THỨ MƯỜI BA</title>
-    <link rel="stylesheet" href="../assets/style.css">
-    <style>
-        .controls {
-            margin: 1em 0;
-            display: flex;
-            gap: 1em;
-        }
+  <script>
+    (function() {
+    const f = localStorage.getItem("font") || "sans";
+    const s = localStorage.getItem("size") || "18";
+    const theme = localStorage.getItem("theme");
+    let cls = `font-${f} size-${s}px`;
+    if (theme === "dark") cls += " dark";
+    document.write(`<body class="${cls}">`);
+  })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>695_GƯƠNG SOI VỌNG TIẾNG, TỪ TRỜI CAO GẦM THÉT CHƯƠNG THỨ MƯỜI BA</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    body { margin: 40px; }
 
-        .theme-toggle, .font-controls button {
-            cursor: pointer;
-            padding: 6px 10px;
-            font-size: 1em;
-        }
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --link-color: royalblue;
+    }
+    body.dark {
+      --bg-color: #111111;
+      --text-color: #eeeeee;
+      --link-color: #4ea1ff;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .theme-toggle {
+      text-align: right;
+    }
+    .theme-toggle button {
+      padding: 4px 10px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--link-color);
+      color: var(--link-color);
+      border-radius: 4px;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
 
-        body.dark-mode {
-            background-color: #111;
-            color: #eee;
-        }
+    body.sans  { font-family: sans-serif; }
+    body.serif { font-family: 'Times New Roman', serif; }
+    body.mono  { font-family: monospace; }
 
-        body.dark-mode a { color: #80bfff; }
-        body.dark-mode pre { background: #1e1e1e; color: #eee; }
-    </style>
+
+
+    .size-16px { font-size: 16px; }
+    .size-18px { font-size: 18px; }
+    .size-20px { font-size: 20px; }
+    .size-22px { font-size: 22px; }
+    .size-24px { font-size: 24px; }
+    .size-26px { font-size: 26px; }
+    .size-28px { font-size: 28px; }
+    .size-30px { font-size: 30px; }
+    .size-32px { font-size: 32px; }
+    .size-34px { font-size: 34px; }
+
+    .font-options {
+      margin-bottom: 1em;
+      font-size: 0.95em;
+    }
+    .font-options a {
+      color: royalblue;
+      text-decoration: none;
+      margin-right: 6px;
+    }
+    .font-options a:hover { text-decoration: underline; }
+  </style>
 </head>
-<body>
-    <div class="post-detail">
-        <div class="controls">
-            <button class="theme-toggle" onclick="toggleTheme()">🌗 Chuyển theme</button>
-            <div class="font-controls">
-                <button onclick="changeFontSize(1)">A+</button>
-                <button onclick="changeFontSize(-1)">A-</button>
-                <button onclick="resetFontSize()">Mặc định</button>
-            </div>
-        </div>
+<body class="sans size-20">
+    <div class="container">
+        <div class="theme-toggle">
+      <button id="toggle-theme">🌙 / ☀</button>
+    </div>
 
-        <h1 class="post-title">695_GƯƠNG SOI VỌNG TIẾNG, TỪ TRỜI CAO GẦM THÉT CHƯƠNG THỨ MƯỜI BA</h1>
-        <p class="post-series"><i>Bộ: vi - Shangri-la Frontier</i></p>
-        <hr>
 
-        <div class="post-content">
-            <pre id="contentArea">GƯƠNG SOI VỌNG TIẾNG, TỪ TRỜI CAO GẦM THÉT CHƯƠNG THỨ MƯỜI BA
+  <div class="font-options">
+    <strong>Phông chữ:</strong>
+    <a href="?font=sans">Sans</a> |
+    <a href="?font=serif">Serif</a> |
+    <a href="?font=mono">Mono</a>
+    <br><br>
+    <strong>Cỡ chữ:</strong>
+    
+      <a href="?font=sans&size=16">16px</a> | 
+    
+      <a href="?font=sans&size=18">18px</a> | 
+    
+      <a href="?font=sans&size=20">20px</a> | 
+    
+      <a href="?font=sans&size=22">22px</a> | 
+    
+      <a href="?font=sans&size=24">24px</a> | 
+    
+      <a href="?font=sans&size=26">26px</a> | 
+    
+      <a href="?font=sans&size=28">28px</a> | 
+    
+      <a href="?font=sans&size=30">30px</a> | 
+    
+      <a href="?font=sans&size=32">32px</a> | 
+    
+      <a href="?font=sans&size=34">34px</a>
+    
+  </div>
+
+  <div class="post-nav">
+    
+        <a href="../posts/694-tiếng-vọng-trong-gương-tiếng-gầm-từ-trời-cao-phần-mười-hai.html">⬅ Bài trước</a>
+    
+    
+        <a href="../posts/696-tiếng-vọng-trong-gương-gầm-rú-từ-chốn-thiên-cao-chương-mười-bốn.html">Bài sau ➡</a>
+    
+</div>
+  <div style="text-align: center;">
+    <a href="../index.html">← Quay về danh sách</a>
+  </div>
+
+
+  <h1>695_GƯƠNG SOI VỌNG TIẾNG, TỪ TRỜI CAO GẦM THÉT CHƯƠNG THỨ MƯỜI BA</h1>
+  <p><i>Bộ: vi - Shangri-la Frontier</i></p>
+  <hr>
+  <pre>GƯƠNG SOI VỌNG TIẾNG, TỪ TRỜI CAO GẦM THÉT CHƯƠNG THỨ MƯỜI BA
 
 Việc chọn “Kéo Sóng (Bump)” chuyên về cự ly không phải là một lý do ngẫu nhiên. Sanraku, kẻ đã bay vút đi kèm theo gia tốc xoáy, cho dù có dùng nhảy trên không đi nữa, cũng không thể thoát khỏi phạm vi tòa nhà chọc trời do Saína tạo ra!! Đồ ngu! Ngươi nghĩ ta vô ích nhảy nhót bấy lâu nay là vì cái gì, tất cả chỉ để lôi ngươi ra khỏi vùng sân khấu đó thôi!!
 
@@ -163,35 +263,46 @@ Không rõ vì nguyên lý gì, một bóng người đã di chuyển đến g�
 Lời bạt: Đánh giá ca khúc solo của Sternblum từ Andrew đã trở về
 
 “Erma Sakishima. Với dáng vẻ trầm tĩnh và giọng hát trong trẻo như dòng suối mát, dù là ca khúc sôi động và bắt tai đến mấy thì cô ấy vẫn giữ được nét thanh tao… riêng với “Highway Star”, đây là ca khúc solo duy nhất tỏa sáng rực rỡ trong sự dị biệt của cô ấy. Xin lỗi khi nói vậy, nhưng việc cô ấy tự mình sáng tác lời và nhạc, đồng thời tự đệm guitar đã khiến ca khúc này hoàn toàn khác biệt so với những bài khác. Cô ấy đã thể hiện giọng hát chứa đựng nỗi khao khát về những điều không tồn tại trong Bahamut – một đặc điểm chung trong các bài hát do Erma sáng tác – bằng một giai điệu rock. Ca khúc này thực sự là bài hát từ tâm hồn của Erma Sakishima. Dĩ nhiên, không phải những bài khác cô ấy đều thỏa hiệp (viết tắt)”</pre>
-        </div>
+  <hr>
 
-        <p><a href="../index.html">← Quay về danh sách</a></p>
-    </div>
+  <div style="text-align: center;">
+    <a href="../index.html">← Quay về danh sách</a>
+  </div>
 
-    <script>
-        const contentArea = document.getElementById("contentArea");
-        let defaultSize = 16;
+  <div class="post-nav">
+    
+        <a href="../posts/694-tiếng-vọng-trong-gương-tiếng-gầm-từ-trời-cao-phần-mười-hai.html">⬅ Bài trước</a>
+    
+    
+        <a href="../posts/696-tiếng-vọng-trong-gương-gầm-rú-từ-chốn-thiên-cao-chương-mười-bốn.html">Bài sau ➡</a>
+    
+  </div>
 
-        function changeFontSize(delta) {
-            const current = parseInt(window.getComputedStyle(contentArea).fontSize);
-            contentArea.style.fontSize = (current + delta) + "px";
-        }
+  <script>
+    const btn = document.getElementById("toggle-theme");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") document.body.classList.add("dark");
+    btn?.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
 
-        function resetFontSize() {
-            contentArea.style.fontSize = defaultSize + "px";
-        }
 
-        function toggleTheme() {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
-        }
+    const params = new URLSearchParams(location.search);
+    const font = params.get("font");
+    const size = params.get("size");
 
-        (function initTheme() {
-            const saved = localStorage.getItem("theme");
-            if (saved === "dark") {
-                document.body.classList.add("dark-mode");
-            }
-        })();
-    </script>
+    if (["sans", "serif", "mono"].includes(font)) {
+      document.body.classList.remove("sans", "serif", "mono");
+      document.body.classList.add(font);
+    }
+
+    const validSizes = ["16","18","20","22","24","26","28","30","32","34"];
+    if (validSizes.includes(size)) {
+      validSizes.forEach(sz => document.body.classList.remove("size-" + sz));
+      document.body.classList.add("size-" + size);
+    }
+  </script>
+  </div>
 </body>
 </html>

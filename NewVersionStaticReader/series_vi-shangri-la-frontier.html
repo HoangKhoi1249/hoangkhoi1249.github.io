@@ -1,490 +1,553 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Danh sách Bài viết</title>
-    <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài viết tĩnh</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --link-color: royalblue;
+    }
+    body.dark {
+      --bg-color: #111111;
+      --text-color: #eeeeee;
+      --link-color: #4ea1ff;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      font-family: sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: var(--link-color);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .post {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .pagination a {
+      margin: 5px;
+      text-decoration: none;
+    }
+    .theme-toggle {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+    .theme-toggle button {
+      padding: 4px 10px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--link-color);
+      color: var(--link-color);
+      border-radius: 4px;
+    }
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 1.2em; }
+      .post { font-size: 0.9em; }
+    }
+  </style>
 </head>
 <body>
-    <div class="page-wrapper">
-        <h1 class="page-title">📚 Danh sách Bài Viết</h1>
-
-        <div class="series-filter">
-            <form method="get" onsubmit="return false;">
-                <label for="seriesSelect">Lọc theo bộ:</label>
-                <select id="seriesSelect" onchange="location.href=this.value">
-                    <option value="index.html">Tất cả</option>
-                    
-                        <option value="series_en-infinite-mage.html"
-                            >
-                            en - Infinite Mage
-                        </option>
-                    
-                        <option value="series_vi-shangri-la-frontier.html"
-                            selected>
-                            vi - Shangri-la Frontier
-                        </option>
-                    
-                </select>
-            </form>
-        </div>
-
-        <div class="post-list">
-            
-                <div class="post-item">
-                    <a class="post-link" href="posts/365-kẻ-báo-thù-mang-dấu-ấn-shoebill.html">
-                        <strong>365_KẺ BÁO THÙ MANG DẤU ẤN SHOEBILL</strong>
-                    </a>
-                    <span class="post-series">(<i>vi - Shangri-la Frontier</i>)</span>
-                </div>
-            
-                <div class="post-item">
-                    <a class="post-link" href="posts/366-kẻ-giữ-bí-mật-mâu-thuẫn.html">
-                        <strong>366_KẺ GIỮ BÍ MẬT MÂU THUẪN</strong>
-                    </a>
-                    <span class="post-series">(<i>vi - Shangri-la Frontier</i>)</span>
-                </div>
-            
-                <div class="post-item">
-                    <a class="post-link" href="posts/367-tầm-quan-trọng-của-cuộc-hẹn.html">
-                        <strong>367_TẦM QUAN TRỌNG CỦA CUỘC HẸN</strong>
-                    </a>
-                    <span class="post-series">(<i>vi - Shangri-la Frontier</i>)</span>
-                </div>
-            
-                <div class="post-item">
-                    <a class="post-link" href="posts/368-trí-tuệ-hồi-ức-kể-chuyện.html">
-                        <strong>368_TRÍ TUỆ HỒI ỨC KỂ CHUYỆN</strong>
-                    </a>
-                    <span class="post-series">(<i>vi - Shangri-la Frontier</i>)</span>
-                </div>
-            
-                <div class="post-item">
-                    <a class="post-link" href="posts/369-kiểu-cách-chẳng-ra-kiểu-cách.html">
-                        <strong>369_Kiểu Cách Chẳng Ra Kiểu Cách</strong>
-                    </a>
-                    <span class="post-series">(<i>vi - Shangri-la Frontier</i>)</span>
-                </div>
-            
-        </div>
-
-        <div class="pagination">
-            
-
-            
-                
-                    <strong>[1]</strong>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier2.html">2</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier3.html">3</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier4.html">4</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier5.html">5</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier6.html">6</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier7.html">7</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier8.html">8</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier9.html">9</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier10.html">10</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier11.html">11</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier12.html">12</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier13.html">13</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier14.html">14</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier15.html">15</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier16.html">16</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier17.html">17</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier18.html">18</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier19.html">19</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier20.html">20</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier21.html">21</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier22.html">22</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier23.html">23</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier24.html">24</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier25.html">25</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier26.html">26</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier27.html">27</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier28.html">28</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier29.html">29</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier30.html">30</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier31.html">31</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier32.html">32</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier33.html">33</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier34.html">34</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier35.html">35</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier36.html">36</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier37.html">37</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier38.html">38</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier39.html">39</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier40.html">40</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier41.html">41</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier42.html">42</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier43.html">43</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier44.html">44</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier45.html">45</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier46.html">46</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier47.html">47</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier48.html">48</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier49.html">49</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier50.html">50</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier51.html">51</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier52.html">52</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier53.html">53</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier54.html">54</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier55.html">55</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier56.html">56</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier57.html">57</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier58.html">58</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier59.html">59</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier60.html">60</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier61.html">61</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier62.html">62</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier63.html">63</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier64.html">64</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier65.html">65</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier66.html">66</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier67.html">67</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier68.html">68</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier69.html">69</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier70.html">70</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier71.html">71</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier72.html">72</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier73.html">73</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier74.html">74</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier75.html">75</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier76.html">76</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier77.html">77</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier78.html">78</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier79.html">79</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier80.html">80</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier81.html">81</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier82.html">82</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier83.html">83</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier84.html">84</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier85.html">85</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier86.html">86</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier87.html">87</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier88.html">88</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier89.html">89</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier90.html">90</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier91.html">91</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier92.html">92</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier93.html">93</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier94.html">94</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier95.html">95</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier96.html">96</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier97.html">97</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier98.html">98</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier99.html">99</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier100.html">100</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier101.html">101</a>
-                
-            
-                
-                    <a href="series_vi-shangri-la-frontier102.html">102</a>
-                
-            
-
-            
-                <a href="series_vi-shangri-la-frontier2.html">Tiếp →</a>
-            
-        </div>
+  <div class="container">
+    <div class="theme-toggle">
+      <button id="toggle-theme">🌙 / ☀</button>
     </div>
+
+    <h1>📚 Danh sách Post</h1>
+
+    <form method="get" style="margin-bottom: 1em;">
+      <label>Lọc theo bộ:</label>
+      <select name="series" onchange="location.href=this.value">
+        <option value="index.html">Tất cả</option>
+        
+          <option value="series_en-infinite-mage.html" >
+            en - Infinite Mage
+          </option>
+        
+          <option value="series_vi-shangri-la-frontier.html" selected>
+            vi - Shangri-la Frontier
+          </option>
+        
+      </select>
+    </form>
+
+    
+      <div class="post">
+        <a href="posts/365-kẻ-báo-thù-mang-dấu-ấn-shoebill.html">
+          <strong>365_KẺ BÁO THÙ MANG DẤU ẤN SHOEBILL</strong>
+        </a>
+        <i>(Bộ: vi - Shangri-la Frontier)</i>
+      </div>
+    
+      <div class="post">
+        <a href="posts/366-kẻ-giữ-bí-mật-mâu-thuẫn.html">
+          <strong>366_KẺ GIỮ BÍ MẬT MÂU THUẪN</strong>
+        </a>
+        <i>(Bộ: vi - Shangri-la Frontier)</i>
+      </div>
+    
+      <div class="post">
+        <a href="posts/367-tầm-quan-trọng-của-cuộc-hẹn.html">
+          <strong>367_TẦM QUAN TRỌNG CỦA CUỘC HẸN</strong>
+        </a>
+        <i>(Bộ: vi - Shangri-la Frontier)</i>
+      </div>
+    
+      <div class="post">
+        <a href="posts/368-trí-tuệ-hồi-ức-kể-chuyện.html">
+          <strong>368_TRÍ TUỆ HỒI ỨC KỂ CHUYỆN</strong>
+        </a>
+        <i>(Bộ: vi - Shangri-la Frontier)</i>
+      </div>
+    
+      <div class="post">
+        <a href="posts/369-kiểu-cách-chẳng-ra-kiểu-cách.html">
+          <strong>369_Kiểu Cách Chẳng Ra Kiểu Cách</strong>
+        </a>
+        <i>(Bộ: vi - Shangri-la Frontier)</i>
+      </div>
+    
+
+    <div class="pagination">
+      
+
+      
+        
+          <strong>[1]</strong>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier2.html">2</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier3.html">3</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier4.html">4</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier5.html">5</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier6.html">6</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier7.html">7</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier8.html">8</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier9.html">9</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier10.html">10</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier11.html">11</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier12.html">12</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier13.html">13</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier14.html">14</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier15.html">15</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier16.html">16</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier17.html">17</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier18.html">18</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier19.html">19</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier20.html">20</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier21.html">21</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier22.html">22</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier23.html">23</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier24.html">24</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier25.html">25</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier26.html">26</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier27.html">27</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier28.html">28</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier29.html">29</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier30.html">30</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier31.html">31</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier32.html">32</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier33.html">33</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier34.html">34</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier35.html">35</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier36.html">36</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier37.html">37</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier38.html">38</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier39.html">39</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier40.html">40</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier41.html">41</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier42.html">42</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier43.html">43</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier44.html">44</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier45.html">45</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier46.html">46</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier47.html">47</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier48.html">48</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier49.html">49</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier50.html">50</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier51.html">51</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier52.html">52</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier53.html">53</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier54.html">54</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier55.html">55</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier56.html">56</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier57.html">57</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier58.html">58</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier59.html">59</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier60.html">60</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier61.html">61</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier62.html">62</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier63.html">63</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier64.html">64</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier65.html">65</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier66.html">66</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier67.html">67</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier68.html">68</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier69.html">69</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier70.html">70</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier71.html">71</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier72.html">72</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier73.html">73</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier74.html">74</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier75.html">75</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier76.html">76</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier77.html">77</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier78.html">78</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier79.html">79</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier80.html">80</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier81.html">81</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier82.html">82</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier83.html">83</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier84.html">84</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier85.html">85</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier86.html">86</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier87.html">87</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier88.html">88</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier89.html">89</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier90.html">90</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier91.html">91</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier92.html">92</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier93.html">93</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier94.html">94</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier95.html">95</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier96.html">96</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier97.html">97</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier98.html">98</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier99.html">99</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier100.html">100</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier101.html">101</a>
+        
+      
+        
+          <a href="series_vi-shangri-la-frontier102.html">102</a>
+        
+      
+
+      
+        <a href="series_vi-shangri-la-frontier2.html">Trang sau »</a>
+      
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("toggle-theme");
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") document.body.classList.add("dark");
+    btn?.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
+  </script>
 </body>
 </html>

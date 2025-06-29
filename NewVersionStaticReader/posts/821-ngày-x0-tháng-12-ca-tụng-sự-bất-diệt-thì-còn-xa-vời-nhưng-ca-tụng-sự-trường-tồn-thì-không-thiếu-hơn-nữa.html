@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>821_NGÀY X0 THÁNG 12 CA TỤNG SỰ BẤT DIỆT THÌ CÒN XA VỜI, NHƯNG CA TỤNG SỰ TRƯỜNG TỒN THÌ KHÔNG THIẾU. HƠN NỮA,</title>
-    <link rel="stylesheet" href="../assets/style.css">
-    <style>
-        .controls {
-            margin: 1em 0;
-            display: flex;
-            gap: 1em;
-        }
+  <script>
+    (function() {
+    const f = localStorage.getItem("font") || "sans";
+    const s = localStorage.getItem("size") || "18";
+    const theme = localStorage.getItem("theme");
+    let cls = `font-${f} size-${s}px`;
+    if (theme === "dark") cls += " dark";
+    document.write(`<body class="${cls}">`);
+  })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>821_NGÀY X0 THÁNG 12 CA TỤNG SỰ BẤT DIỆT THÌ CÒN XA VỜI, NHƯNG CA TỤNG SỰ TRƯỜNG TỒN THÌ KHÔNG THIẾU. HƠN NỮA,</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    body { margin: 40px; }
 
-        .theme-toggle, .font-controls button {
-            cursor: pointer;
-            padding: 6px 10px;
-            font-size: 1em;
-        }
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --link-color: royalblue;
+    }
+    body.dark {
+      --bg-color: #111111;
+      --text-color: #eeeeee;
+      --link-color: #4ea1ff;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .theme-toggle {
+      text-align: right;
+    }
+    .theme-toggle button {
+      padding: 4px 10px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--link-color);
+      color: var(--link-color);
+      border-radius: 4px;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
 
-        body.dark-mode {
-            background-color: #111;
-            color: #eee;
-        }
+    body.sans  { font-family: sans-serif; }
+    body.serif { font-family: 'Times New Roman', serif; }
+    body.mono  { font-family: monospace; }
 
-        body.dark-mode a { color: #80bfff; }
-        body.dark-mode pre { background: #1e1e1e; color: #eee; }
-    </style>
+
+
+    .size-16px { font-size: 16px; }
+    .size-18px { font-size: 18px; }
+    .size-20px { font-size: 20px; }
+    .size-22px { font-size: 22px; }
+    .size-24px { font-size: 24px; }
+    .size-26px { font-size: 26px; }
+    .size-28px { font-size: 28px; }
+    .size-30px { font-size: 30px; }
+    .size-32px { font-size: 32px; }
+    .size-34px { font-size: 34px; }
+
+    .font-options {
+      margin-bottom: 1em;
+      font-size: 0.95em;
+    }
+    .font-options a {
+      color: royalblue;
+      text-decoration: none;
+      margin-right: 6px;
+    }
+    .font-options a:hover { text-decoration: underline; }
+  </style>
 </head>
-<body>
-    <div class="post-detail">
-        <div class="controls">
-            <button class="theme-toggle" onclick="toggleTheme()">🌗 Chuyển theme</button>
-            <div class="font-controls">
-                <button onclick="changeFontSize(1)">A+</button>
-                <button onclick="changeFontSize(-1)">A-</button>
-                <button onclick="resetFontSize()">Mặc định</button>
-            </div>
-        </div>
+<body class="sans size-20">
+    <div class="container">
+        <div class="theme-toggle">
+      <button id="toggle-theme">🌙 / ☀</button>
+    </div>
 
-        <h1 class="post-title">821_NGÀY X0 THÁNG 12 CA TỤNG SỰ BẤT DIỆT THÌ CÒN XA VỜI, NHƯNG CA TỤNG SỰ TRƯỜNG TỒN THÌ KHÔNG THIẾU. HƠN NỮA,</h1>
-        <p class="post-series"><i>Bộ: vi - Shangri-la Frontier</i></p>
-        <hr>
 
-        <div class="post-content">
-            <pre id="contentArea">NGÀY X0 THÁNG 12: CA TỤNG SỰ BẤT DIỆT THÌ CÒN XA VỜI, NHƯNG CA TỤNG SỰ TRƯỜNG TỒN THÌ KHÔNG THIẾU. HƠN NỮA,
+  <div class="font-options">
+    <strong>Phông chữ:</strong>
+    <a href="?font=sans">Sans</a> |
+    <a href="?font=serif">Serif</a> |
+    <a href="?font=mono">Mono</a>
+    <br><br>
+    <strong>Cỡ chữ:</strong>
+    
+      <a href="?font=sans&size=16">16px</a> | 
+    
+      <a href="?font=sans&size=18">18px</a> | 
+    
+      <a href="?font=sans&size=20">20px</a> | 
+    
+      <a href="?font=sans&size=22">22px</a> | 
+    
+      <a href="?font=sans&size=24">24px</a> | 
+    
+      <a href="?font=sans&size=26">26px</a> | 
+    
+      <a href="?font=sans&size=28">28px</a> | 
+    
+      <a href="?font=sans&size=30">30px</a> | 
+    
+      <a href="?font=sans&size=32">32px</a> | 
+    
+      <a href="?font=sans&size=34">34px</a>
+    
+  </div>
+
+  <div class="post-nav">
+    
+        <a href="../posts/820-ngày-1-tháng-12-nhị-đao-lưu-không-phải-là-song-kiếm.html">⬅ Bài trước</a>
+    
+    
+        <a href="../posts/822-ngày-17-tháng-12-mera-mera-beat-up-phần-5.html">Bài sau ➡</a>
+    
+</div>
+  <div style="text-align: center;">
+    <a href="../index.html">← Quay về danh sách</a>
+  </div>
+
+
+  <h1>821_NGÀY X0 THÁNG 12 CA TỤNG SỰ BẤT DIỆT THÌ CÒN XA VỜI, NHƯNG CA TỤNG SỰ TRƯỜNG TỒN THÌ KHÔNG THIẾU. HƠN NỮA,</h1>
+  <p><i>Bộ: vi - Shangri-la Frontier</i></p>
+  <hr>
+  <pre>NGÀY X0 THÁNG 12: CA TỤNG SỰ BẤT DIỆT THÌ CÒN XA VỜI, NHƯNG CA TỤNG SỰ TRƯỜNG TỒN THÌ KHÔNG THIẾU. HƠN NỮA,
 
 ◆
 
@@ -171,35 +271,46 @@ Thế thì ra cái đội thay đồ đang chờ sẵn để chụp ảnh màn h
 Đồ hầu gái cấp độ “Quyết đấu” mang tên “Bất Diệt Ngàn Thu”
 
 Ý tưởng ban đầu là khiến nó không bao giờ bị hỏng hóc bằng cách chuyển đổi sát thương thành “không vết xước”, nhưng sau khi nhận được lời vàng ý ngọc từ Isana rằng “Nếu kỹ thuật đó đã được thiết lập thì tôi đã dùng nó cho Leviathan từ lâu rồi, đồ ngốc”, và vì nhận thấy tính chất của sợi đá quý dệt từ đá quý thú vị hơn mình nghĩ, Elysion đã hoàn thành bộ đồ hầu gái không thể phá hủy với “tốc độ phục hồi đến mức sửa chữa đã hoàn tất trước khi sát thương bên ngoài phá hủy bộ đồ hầu gái và tác động đến cơ thể”. Do là phong cách hầu gái cổ điển nên bộ đồ này che phủ gần hết cơ thể, phần lớn được cấu tạo từ sợi tinh thể sao Lapisteria, cho phép mana được truyền vào nhanh và tối ưu nhất từ các ống tiếp năng lượng, hoàn tất sửa chữa trong vòng 0.1 giây sau khi tác động nổ ra. Vì vậy, nó ngẫu nhiên có được khả năng chống chịu cực kỳ mạnh mẽ trước các đòn tấn công phá hủy hình dạng của bộ đồ hầu gái, như chém hoặc đốt cháy tức thời. Tuy nhiên, rốt cuộc nó vẫn chỉ là một bộ quần áo, nên hầu như vô dụng trước các đòn tấn công gây sát thương trực tiếp lên cơ thể dù đã phòng thủ bằng trang phục, chẳng hạn như chấn động trên diện rộng từ đòn đánh hoặc đóng băng. Hơn nữa, trước các đòn tấn công như đốt cháy hoặc hòa tan kéo dài, nó bộc lộ điểm yếu là liên tục tiêu thụ nguồn mana từ các ống tiếp năng lượng, làm hao hụt thời gian sử dụng. Lưu ý rằng lần này là phong cách hầu gái cổ điển, lý do là vì người chơi Sanraku có thể phần nào linh hoạt dù mặc váy dài, và trên hết, đây là một trang bị phòng thủ nên phải tuân thủ nguyên tắc cơ bản là bảo vệ mạng sống người mặc. Điều này không hề phủ nhận kiểu váy hầu gái ngắn, nhưng mà, bộ đồ “Bất Diệt Ngàn Thu” này còn có một chức năng nhận dạng giọng nói, đây là cơ chế được tích hợp vào dây đeo ống tiếp năng lượng, và nhờ đó nó tạo ra một đường dẫn mana phụ để (viết tắt).</pre>
-        </div>
+  <hr>
 
-        <p><a href="../index.html">← Quay về danh sách</a></p>
-    </div>
+  <div style="text-align: center;">
+    <a href="../index.html">← Quay về danh sách</a>
+  </div>
 
-    <script>
-        const contentArea = document.getElementById("contentArea");
-        let defaultSize = 16;
+  <div class="post-nav">
+    
+        <a href="../posts/820-ngày-1-tháng-12-nhị-đao-lưu-không-phải-là-song-kiếm.html">⬅ Bài trước</a>
+    
+    
+        <a href="../posts/822-ngày-17-tháng-12-mera-mera-beat-up-phần-5.html">Bài sau ➡</a>
+    
+  </div>
 
-        function changeFontSize(delta) {
-            const current = parseInt(window.getComputedStyle(contentArea).fontSize);
-            contentArea.style.fontSize = (current + delta) + "px";
-        }
+  <script>
+    const btn = document.getElementById("toggle-theme");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") document.body.classList.add("dark");
+    btn?.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
 
-        function resetFontSize() {
-            contentArea.style.fontSize = defaultSize + "px";
-        }
 
-        function toggleTheme() {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
-        }
+    const params = new URLSearchParams(location.search);
+    const font = params.get("font");
+    const size = params.get("size");
 
-        (function initTheme() {
-            const saved = localStorage.getItem("theme");
-            if (saved === "dark") {
-                document.body.classList.add("dark-mode");
-            }
-        })();
-    </script>
+    if (["sans", "serif", "mono"].includes(font)) {
+      document.body.classList.remove("sans", "serif", "mono");
+      document.body.classList.add(font);
+    }
+
+    const validSizes = ["16","18","20","22","24","26","28","30","32","34"];
+    if (validSizes.includes(size)) {
+      validSizes.forEach(sz => document.body.classList.remove("size-" + sz));
+      document.body.classList.add("size-" + size);
+    }
+  </script>
+  </div>
 </body>
 </html>

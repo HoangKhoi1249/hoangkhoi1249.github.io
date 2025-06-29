@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>385_TỔN THẤT PHỤ TRỢ</title>
-    <link rel="stylesheet" href="../assets/style.css">
-    <style>
-        .controls {
-            margin: 1em 0;
-            display: flex;
-            gap: 1em;
-        }
+  <script>
+    (function() {
+    const f = localStorage.getItem("font") || "sans";
+    const s = localStorage.getItem("size") || "18";
+    const theme = localStorage.getItem("theme");
+    let cls = `font-${f} size-${s}px`;
+    if (theme === "dark") cls += " dark";
+    document.write(`<body class="${cls}">`);
+  })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>385_TỔN THẤT PHỤ TRỢ</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    body { margin: 40px; }
 
-        .theme-toggle, .font-controls button {
-            cursor: pointer;
-            padding: 6px 10px;
-            font-size: 1em;
-        }
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --link-color: royalblue;
+    }
+    body.dark {
+      --bg-color: #111111;
+      --text-color: #eeeeee;
+      --link-color: #4ea1ff;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .theme-toggle {
+      text-align: right;
+    }
+    .theme-toggle button {
+      padding: 4px 10px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--link-color);
+      color: var(--link-color);
+      border-radius: 4px;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
 
-        body.dark-mode {
-            background-color: #111;
-            color: #eee;
-        }
+    body.sans  { font-family: sans-serif; }
+    body.serif { font-family: 'Times New Roman', serif; }
+    body.mono  { font-family: monospace; }
 
-        body.dark-mode a { color: #80bfff; }
-        body.dark-mode pre { background: #1e1e1e; color: #eee; }
-    </style>
+
+
+    .size-16px { font-size: 16px; }
+    .size-18px { font-size: 18px; }
+    .size-20px { font-size: 20px; }
+    .size-22px { font-size: 22px; }
+    .size-24px { font-size: 24px; }
+    .size-26px { font-size: 26px; }
+    .size-28px { font-size: 28px; }
+    .size-30px { font-size: 30px; }
+    .size-32px { font-size: 32px; }
+    .size-34px { font-size: 34px; }
+
+    .font-options {
+      margin-bottom: 1em;
+      font-size: 0.95em;
+    }
+    .font-options a {
+      color: royalblue;
+      text-decoration: none;
+      margin-right: 6px;
+    }
+    .font-options a:hover { text-decoration: underline; }
+  </style>
 </head>
-<body>
-    <div class="post-detail">
-        <div class="controls">
-            <button class="theme-toggle" onclick="toggleTheme()">🌗 Chuyển theme</button>
-            <div class="font-controls">
-                <button onclick="changeFontSize(1)">A+</button>
-                <button onclick="changeFontSize(-1)">A-</button>
-                <button onclick="resetFontSize()">Mặc định</button>
-            </div>
-        </div>
+<body class="sans size-20">
+    <div class="container">
+        <div class="theme-toggle">
+      <button id="toggle-theme">🌙 / ☀</button>
+    </div>
 
-        <h1 class="post-title">385_TỔN THẤT PHỤ TRỢ</h1>
-        <p class="post-series"><i>Bộ: vi - Shangri-la Frontier</i></p>
-        <hr>
 
-        <div class="post-content">
-            <pre id="contentArea">**TỔN THẤT PHỤ TRỢ**
+  <div class="font-options">
+    <strong>Phông chữ:</strong>
+    <a href="?font=sans">Sans</a> |
+    <a href="?font=serif">Serif</a> |
+    <a href="?font=mono">Mono</a>
+    <br><br>
+    <strong>Cỡ chữ:</strong>
+    
+      <a href="?font=sans&size=16">16px</a> | 
+    
+      <a href="?font=sans&size=18">18px</a> | 
+    
+      <a href="?font=sans&size=20">20px</a> | 
+    
+      <a href="?font=sans&size=22">22px</a> | 
+    
+      <a href="?font=sans&size=24">24px</a> | 
+    
+      <a href="?font=sans&size=26">26px</a> | 
+    
+      <a href="?font=sans&size=28">28px</a> | 
+    
+      <a href="?font=sans&size=30">30px</a> | 
+    
+      <a href="?font=sans&size=32">32px</a> | 
+    
+      <a href="?font=sans&size=34">34px</a>
+    
+  </div>
+
+  <div class="post-nav">
+    
+        <a href="../posts/384-side6-át-bích-mang-gánh-nặng.html">⬅ Bài trước</a>
+    
+    
+        <a href="../posts/386-shangrila-frontier-thợ-săn-game-dở-tệ-thử-thách-game-thần-thánh.html">Bài sau ➡</a>
+    
+</div>
+  <div style="text-align: center;">
+    <a href="../index.html">← Quay về danh sách</a>
+  </div>
+
+
+  <h1>385_TỔN THẤT PHỤ TRỢ</h1>
+  <p><i>Bộ: vi - Shangri-la Frontier</i></p>
+  <hr>
+  <pre>**TỔN THẤT PHỤ TRỢ**
 
 ◆
 
@@ -162,35 +262,46 @@ Vì có khá nhiều người hỏi, nên tôi sẽ giải thích về các tay 
     Là hiện thân của tinh thần chiến đấu, luôn tích cực gây sự với các tay chơi top đầu, đồng thời cũng là hiện thân của sự biến thái với bộ trang phục nửa thân trên là giáp trụ, nửa thân dưới là khố, cùng với vũ khí búa tạ. Vì là tay chơi top, đương nhiên hắn mạnh với những kẻ yếu hơn, nhưng ngược lại, những kẻ mạnh hơn lại là quái vật thực sự, nên thường thì hắn bị Raid Boss đánh bại ngay từ đầu sự kiện và không thể kiếm được điểm. Trong sự kiện lần này, nhờ học được kỹ năng “Trân Trọng Sinh Mạng”, vị trí thứ 8 tự động rơi vào tay, nên hắn hơi vui một chút.
 10. **Kẻ Bị Hạ Bệ**
     Trong bất kỳ ngành nghề nào, kẻ ở vị trí thứ 10 cũng có số phận bị coi thường với câu nói “Hạng 10 thì có gì ghê gớm đâu lol”, nên đây là người chơi mang nỗi buồn bị những người từ hạng 11 trở xuống nhắm đến đầu tiên. Tuy nhiên, vì hắn đã chặn đứng tất cả các cuộc tấn công nên thực lực của một tay chơi top là không thể phủ nhận. Nhưng trong thời gian sự kiện, hắn gần như chắc chắn bị những kẻ yếu hơn bám riết, khiến hắn không có thời gian để nhắm đến các vị trí cao hơn – một chiến binh đầy bi kịch. Thế nên, hắn tuyệt đối không dung thứ cho bất kỳ kẻ thù nào lao đến, sẽ xẻ thịt chúng ra làm ba mảnh.</pre>
-        </div>
+  <hr>
 
-        <p><a href="../index.html">← Quay về danh sách</a></p>
-    </div>
+  <div style="text-align: center;">
+    <a href="../index.html">← Quay về danh sách</a>
+  </div>
 
-    <script>
-        const contentArea = document.getElementById("contentArea");
-        let defaultSize = 16;
+  <div class="post-nav">
+    
+        <a href="../posts/384-side6-át-bích-mang-gánh-nặng.html">⬅ Bài trước</a>
+    
+    
+        <a href="../posts/386-shangrila-frontier-thợ-săn-game-dở-tệ-thử-thách-game-thần-thánh.html">Bài sau ➡</a>
+    
+  </div>
 
-        function changeFontSize(delta) {
-            const current = parseInt(window.getComputedStyle(contentArea).fontSize);
-            contentArea.style.fontSize = (current + delta) + "px";
-        }
+  <script>
+    const btn = document.getElementById("toggle-theme");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") document.body.classList.add("dark");
+    btn?.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
 
-        function resetFontSize() {
-            contentArea.style.fontSize = defaultSize + "px";
-        }
 
-        function toggleTheme() {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
-        }
+    const params = new URLSearchParams(location.search);
+    const font = params.get("font");
+    const size = params.get("size");
 
-        (function initTheme() {
-            const saved = localStorage.getItem("theme");
-            if (saved === "dark") {
-                document.body.classList.add("dark-mode");
-            }
-        })();
-    </script>
+    if (["sans", "serif", "mono"].includes(font)) {
+      document.body.classList.remove("sans", "serif", "mono");
+      document.body.classList.add(font);
+    }
+
+    const validSizes = ["16","18","20","22","24","26","28","30","32","34"];
+    if (validSizes.includes(size)) {
+      validSizes.forEach(sz => document.body.classList.remove("size-" + sz));
+      document.body.classList.add("size-" + size);
+    }
+  </script>
+  </div>
 </body>
 </html>
