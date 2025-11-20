@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>page_438_img_1</title>
+<style>
+body {
+  background-color: #222;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.img-container {
+  background: #333;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  width: 280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: width 0.2s ease, height 0.2s ease; /* <-- thêm chuyển đổi mượt */
+  box-sizing: border-box; /* <-- thêm để padding không làm ảnh vượt khung */
+}
+
+.img-container img {
+  display: block;         /* tránh whitespace dưới ảnh */
+  width: 100%;            /* ảnh luôn theo chiều rộng vùng nội dung của container */
+  max-width: 100%;
+  height: auto;           /* chiều cao tuân theo tỷ lệ ảnh */
+  max-height: none;       /* bỏ giới hạn cứng theo chiều cao để ảnh co theo width */
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+
+.img-container p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #aaa;
+}
+button {
+  margin: 20px 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #666;
+}
+a.back {
+  display: block;
+  margin-top: 20px;
+  color: #88cfff;
+  text-decoration: none;
+}
+a.back:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+  <a class="back" href="../index.html">⬅ Quay lại trang chủ</a>
+  <h1>tenten-art-book</h1>
+
+<div style="margin-top: 20px;">
+  <button onclick="resizeDivByRatio('img-container', 1.1)">Phóng to ảnh</button>
+  <button onclick="resizeDivByRatio('img-container', 0.9)">Thu nhỏ ảnh</button>
+</div>
+
+<script>
+  // Hàm nhận tên lớp (chẳng hạn "img-container") hoặc id (khi truyền "#myId")
+  function resizeDivByRatio(selector, ratio) {
+    let elements = [];
+    if (!selector) return;
+
+    // Nếu bắt đầu bằng '#', xử lý như id
+    if (selector[0] === '#') {
+      const el = document.getElementById(selector.slice(1));
+      if (el) elements.push(el);
+    } else {
+      // xem như tên class: lấy tất cả phần tử có class
+      const col = document.getElementsByClassName(selector);
+      for (let i = 0; i < col.length; i++) elements.push(col[i]);
+    }
+
+    elements.forEach(function(div) {
+      if (!div) return;
+      const rect = div.getBoundingClientRect();
+      const currentWidth = rect.width || div.offsetWidth;
+      const currentHeight = rect.height || div.offsetHeight;
+
+      // Gán lại bằng px để giữ tỷ lệ cụ thể
+      div.style.width = Math.round(currentWidth * ratio) + 'px';
+      div.style.height = Math.round(currentHeight * ratio) + 'px';
+    });
+  }
+
+  // Ví dụ: tăng kích thước gấp đôi
+  // resizeDivByRatio("myDiv", 2);
+</script>
+
+
+  <div>
+    <button onclick="window.location.href='page_434_img_1.html'">⬅ Lùi</button>
+    <button onclick="window.location.href='page_43_img_2.html'">Tiến ➡</button>
+  </div>
+
+  <div class="gallery">
+    <div class="img-container"><img src="tenten-art-book/page_438_img_1.jpeg" alt="page_438_img_1.jpeg"><p>page_438_img_1.jpeg</p></div>
+<div class="img-container"><img src="tenten-art-book/page_438_img_2.jpeg" alt="page_438_img_2.jpeg"><p>page_438_img_2.jpeg</p></div>
+<div class="img-container"><img src="tenten-art-book/page_439_img_1.jpeg" alt="page_439_img_1.jpeg"><p>page_439_img_1.jpeg</p></div>
+<div class="img-container"><img src="tenten-art-book/page_43_img_1.jpeg" alt="page_43_img_1.jpeg"><p>page_43_img_1.jpeg</p></div>
+
+  </div>
+
+  <div>
+    <button onclick="window.location.href='page_434_img_1.html'">⬅ Lùi</button>
+    <button onclick="window.location.href='page_43_img_2.html'">Tiến ➡</button>
+  </div>
+  <a class="back" href="../index.html">⬅ Quay lại trang chủ</a>
+
+
+</body>
+</html>
